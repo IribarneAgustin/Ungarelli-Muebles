@@ -96,6 +96,6 @@ class ArticleController extends Controller
     {
         $article = Article::find($id);
         $article->delete();
-        return redirect('/articles');
+        return redirect('/articles')->with('delete','ok');
     }
 }

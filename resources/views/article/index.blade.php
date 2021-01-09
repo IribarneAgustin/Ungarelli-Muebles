@@ -33,7 +33,7 @@
             <td> {{$article->description}} </td>
             <td> <img src="{{asset($article->image)}}" width="100%" height="auto"></td>
             <td>
-                <form action="{{ route('articles.destroy',$article->id) }}" method="post">
+                <form action="{{ route('articles.destroy',$article->id) }}" method="post" class="delete-form">
                     <a href="/articles/{{$article->id}}/edit" style="width: 40%" class="btn btn-info">Editar</a>
                     @csrf
                     @method('DELETE')
@@ -60,10 +60,44 @@
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap5.min.js"></script>
+<!--Sweet Alert 2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 <script>
     $(document).ready(function() {
         $('#articles').DataTable();
+    });
+</script>
+
+
+@if(session('delete') == 'ok')
+<script>
+    Swal.fire(
+        'Artículo borrado',
+        'El artículo fue borrado exitosamente.',
+        'success'
+    )
+</script>
+@endif
+<script>
+    $('.delete-form').submit(function(e) {
+        e.preventDefault();
+
+        Swal.fire({
+            title: '¿Desea borrar este artículo?',
+            text: " ",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Borrar',
+            cancelButtonText: 'Canelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                this.submit();
+            }
+        })
+
     });
 </script>
 @stop
