@@ -34,60 +34,42 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="titulo text-center my-4">Ungarelli <span>Muebles</span></h1>
-
+    <!-- Navbar -->
+    <div class="w3-top">
         <div class="w3-bar w3-white w3-card">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="mx-auto order-0" id="navbarNavDarkDropdown">
-                        <ul class="navbar-nav">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="/favicons//favicon.ico"></a>
+            <a href="/galeria/muebles" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Muebles de oficina</a>
+            <a href="/galeria/sillas" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Sillas y sillones</a>
+            <a href="/galeria/estanterías" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Estanterías metálicas</a>
+            <a href="/galeria/racks" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Racks</a>
+            <a href="/galeria/muebles metálicos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Muebles metálicos</a>
+            <a href="/galeria/seguridad" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Seguridad</a>
+            <a href="/galeria/accesorios" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Accesorios</a>
+        </div>
+    </div>
+    <!-- Navbar small -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="/galeria/muebles" class="w3-bar-item w3-button w3-padding-large">Muebles de oficina</a>
+        <a href="/galeria/sillas" class="w3-bar-item w3-button w3-padding-large">Sillas y sillones</a>
+        <a href="/galeria/estanterías" class="w3-bar-item w3-button w3-padding-large">Estanterías metálicas</a>
+        <a href="/galeria/racks" class="w3-bar-item w3-button w3-padding-large">Racks</a>
+        <a href="/galeria/muebles metálicos" class="w3-bar-item w3-button w3-padding-large">Muebles metálicos</a>
+        <a href="/galeria/seguridad" class="w3-bar-item w3-button w3-padding-large">Seguridad</a>
+        <a href="/galeria/accesorios" class="w3-bar-item w3-button w3-padding-large">Accesorios</a>
+    </div>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="/galeria/muebles" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                                    Muebles de oficina
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/galeria/sillas" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                                    Sillas y sillones
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/galeria/estanterías" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                                    Estanterías Metálicas
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/galeria/racks" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                                    Racks
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/galeria/muebles metálicos" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                                    Muebles Metálicos
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                                    Seguridad
-                                </a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                                    Accesorios
-                                </a>
-                            </li>
-                        </ul>
+    <!-- Header -->
 
-                    </div>
-                </div>
-            </nav>
-
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+        <img class="w3-image" src="/backgrounds/header.jpg" alt="Ungarelli Muebles" width="1500" height="100">
+        <div class="w3-display-middle w3-margin-top w3-center">
+            <h1 class="w3-xxlarge w3-text-white"><span><b><img class="w3-image" src="/logo/logo.png"> </b></span> <span class="w3-hide-small w3-text-dark-grey">Ungarelli Muebles</span></h1>
+        </div>
     </header>
+
+
+    <!-- Content -->
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
@@ -245,6 +227,43 @@
         </div>
         <!-- Copyright -->
     </footer>
+    <script>
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 
 </body>
