@@ -3,8 +3,8 @@
 @section('contenido')
 
 <div class="text-center pt-5">
-    <h1>Muebles de oficina</h1>
-    <p>Trabajamos con las mejores marcas del país</p>
+    <h1>Sillas y sillones</h1>
+    <p>Trabajamos con las mejores marcas en sillas operativas del país</p>
     <div class="row">
         @foreach($articles as $article)
         <div class="col-md-6 col-lg-4" style="padding:10px">
@@ -26,17 +26,3 @@
 
 
 @stop
-
-<!--
-        <div class="card col-lg-4" width="100%" height="auto" style="padding:25px">
-            <img src="{{$article->image}}" class="card-img-top" width="100%" height="auto" alt="Imagen" />
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                </p>
-                <a href="#!" class="btn btn-primary">Button</a>
-            </div>
-        </div>
--->

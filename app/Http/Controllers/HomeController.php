@@ -14,9 +14,31 @@ class HomeController extends Controller
     }
     public function furnitureGallery()
     {
-
         $articles = $this->getArticlesByCategoryId($this->getCategoryIdByName('Muebles de oficina'));
         return view('gallery.furnitureOffice', ['articles' => $articles]);
+    }
+
+    public function chairsGallery()
+    {
+        $articles = $this->getArticlesByCategoryId($this->getCategoryIdByName('Sillas y sillones'));
+        return view('gallery.chairs', ['articles' => $articles]);
+    }
+
+    public function shelvesGallery()
+    {
+        $articles = $this->getArticlesByCategoryId($this->getCategoryIdByName('Estanterías metálicas'));
+        return view('gallery.shelves', ['articles' => $articles]);
+    }
+    public function racksGallery()
+    {
+        $articles = $this->getArticlesByCategoryId($this->getCategoryIdByName('Racks'));
+        return view('gallery.racks', ['articles' => $articles]);
+    }
+
+    public function metalFurnitureGallery()
+    {
+        $articles = $this->getArticlesByCategoryId($this->getCategoryIdByName('Muebles metálicos'));
+        return view('gallery.metalFurniture', ['articles' => $articles]);
     }
 
     private function getArticlesByCategoryId($categoryId)

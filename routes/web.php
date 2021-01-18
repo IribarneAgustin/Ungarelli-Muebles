@@ -19,3 +19,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
 Route::resource('articles','App\Http\Controllers\ArticleController');
 
 Route::get('/galeria/muebles', [HomeController::class, 'furnitureGallery']);
+
+Route::get('/galeria/sillas', [HomeController::class, 'chairsGallery']);
+
+Route::get('/galeria/estanterías', [HomeController::class, 'shelvesGallery']);
+
+Route::get('/galeria/racks', [HomeController::class, 'racksGallery']);
+
+Route::get('/galeria/muebles metálicos', [HomeController::class, 'metalFurnitureGallery']);
