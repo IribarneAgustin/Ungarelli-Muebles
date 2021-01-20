@@ -8,6 +8,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/rewrite', function () {
+    return view('profile.update-password-form');
+});
+
 Route::get('/admin', function () {
     return view('auth.login');
 });
@@ -27,3 +31,11 @@ Route::get('/galeria/estanterías', [HomeController::class, 'shelvesGallery']);
 Route::get('/galeria/racks', [HomeController::class, 'racksGallery']);
 
 Route::get('/galeria/muebles metálicos', [HomeController::class, 'metalFurnitureGallery']);
+
+Route::get('/galeria/seguridad', [HomeController::class, 'segurityGallery']);
+
+Route::get('/galeria/accesorios', [HomeController::class, 'accesoriesGallery']);
+
+Route::middleware(['auth:sanctum','verified'])->get('/dashboard',function (){
+    return view('dashboard');
+})->name('dashboard');

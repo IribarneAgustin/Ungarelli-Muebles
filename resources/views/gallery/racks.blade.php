@@ -3,8 +3,8 @@
 @section('contenido')
 
 <div class="text-center pt-5">
-    <h1>Racks</h1>
-    <p>Trabajamos con las mejores marcas en sillas operativas del país</p>
+    <h2>Racks</h2>
+    <hr>
     <div class="row">
         @foreach($articles as $article)
         <div class="col-md-6 col-lg-4" style="padding:10px">
@@ -14,8 +14,8 @@
                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
                     </a>
                     <div class="card-body">
-                        <h6>Lorem Ipsum</h6>
-                        <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                        <h6><b>{{$article->name}}</b></h6>
+                        <p class="text-muted card-text">{{$article->description}}</p>
                     </div>
                 </div>
             </div>

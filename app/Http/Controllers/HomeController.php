@@ -40,6 +40,16 @@ class HomeController extends Controller
         $articles = $this->getArticlesByCategoryId($this->getCategoryIdByName('Muebles metálicos'));
         return view('gallery.metalFurniture', ['articles' => $articles]);
     }
+    public function segurityGallery()
+    {
+        $articles = $this->getArticlesByCategoryId($this->getCategoryIdByName('Seguridad'));
+        return view('gallery.segurity', ['articles' => $articles]);
+    }
+    public function accesoriesGallery()
+    {
+        $articles = $this->getArticlesByCategoryId($this->getCategoryIdByName('Accesorios'));
+        return view('gallery.accesories', ['articles' => $articles]);
+    }
 
     private function getArticlesByCategoryId($categoryId)
     {

@@ -21,15 +21,9 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            font-family: "Lato", sans-serif
-        }
 
-        .mySlides {
-            display: none
-        }
-    </style>
+    <link rel="stylesheet" href="/css/stylefonts.css">
+
 
 </head>
 
@@ -63,11 +57,11 @@
 
     <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
         <img class="w3-image" src="/backgrounds/header.jpg" alt="Ungarelli Muebles" width="1500" height="100">
+
         <div class="w3-display-middle w3-margin-top w3-center">
             <h1 class="w3-xxlarge w3-text-white"><span><b><img class="w3-image" src="/logo/logo.png"> </b></span> <span class="w3-hide-small w3-text-dark-grey">Ungarelli Muebles</span></h1>
         </div>
     </header>
-
 
     <!-- Content -->
 
@@ -77,16 +71,16 @@
             <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
             <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner" role="listbox" style="height:auto">
             <div class="carousel-item active">
-                <img src="./image/k.jpg" class="d-block w-100">
+                <img src="./image/local.jpg" class="d-block w-100">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Los mejores muebles para oficina del mercado</h5>
                     <p>Más de 100 años de experiencia</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./image/b.jpg" class="d-block w-100">
+                <img src="./image/carousel.jpg" class="d-block w-100">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Reparaciones de sillas</h5>
                     <p>Contamos con más de 20 años de experiencia en la reparación de sillas de oficina</p>
@@ -110,13 +104,44 @@
             </a>
         </div>
     </div>
+    <!-- Servicios -->
+    <div class="container mt-4">
+        <div class="text-center pt-3">
+            <h2>Servicios</h2>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <img src="./image/Repuestos 2.jpg" class="card-img-top" alt="...">
+                        <h5 class="card-title text-center"><b>Reparaciones de sillas y sillones</b></h5>
+
+                        <p class="card-text">Realizamos presupuestos sin cargo con un amplio grado de detalle. Contamos con mas de 20 años de experiencia en las reparciones y disponemos de los mejores repuestos del país.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <img src="./image/servicios.png" class="card-img-top" alt="...">
+                        <h5 class="card-title text-center"><b>Tapizados</b></h5>
+                        <p class="card-text">Contamos con una amplia variedad de eco cueros de buena calidad, asi como también de panas lavables, para dejar tu sillón como recién comprado. A su vez, rellenamos tanto asiento como respaldo para amortizar el desgaste.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <!-- Quienes somos -->
 
     <div class="container-fluid nosotros bg-primary ">
         <div class="row align-items-center">
             <div class="col-md-6 img-nosotros imagen-bg"></div>
             <div class="col-md-6 text-nosotros text-light">
                 <div class="contenido">
-                    <h2 class="mb-3 titutlo display-4">Quienes Somos?</h2>
+                    <h3 class="mb-3 titutlo display-4">Quienes Somos?</h3>
                     <p>La empresa fue fundada en 1903 por Don Pedro Ungarelli, un inmigrante que invirtió
                         su trabajo para el engrandecimiento de Mar del Plata.
                         Aquellos años marcaron el inicio de una vasta trayectoria empresarial que comienza con la
@@ -142,8 +167,6 @@
                         apostó a la calidad de sus productos, a la confianza de sus clientes y supo ajustarse a la
                         necesidad
                         de cada uno de ellos.
-                    </p>
-                    <p>
                         Hoy puede disfrutar del resultado de un esfuerzo ambicioso planteado hace años y que
                         orgullosamente
                         lleva su nombre.
@@ -153,52 +176,9 @@
         </div>
     </div>
 
-    <div class="container productos  mt-4">
-        <h2 class="text-center">Servicios</h2>
-
-        <div class="row mt-4">
-            <div class="card mb-3" style="max-width: 600px">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg" alt="..." class="img-fluid" />
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Reparaciones</h5>
-                            <p class="card-text">
-                                Conseguimos los mejores repuestos y pasamos presupuestos sin cargo.
-                            </p>
-                            <p class="card-text">
-                                <small class="text-muted">Ver más</small>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card mb-3" style="max-width: 600px">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg" alt="..." class="img-fluid" />
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Tapizados</h5>
-                            <p class="card-text">
-                                Contamos con una alta variedad de telas, panas lavables y eco cueros.
-
-                            </p>
-                            <p class="card-text">
-                                <small class="text-muted">Ver más</small>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
-        </div>
-    </div>
+    <!-- Footer -->
 
     <footer class="bg-light text-center text-lg-start">
         <!-- Grid container -->
@@ -214,6 +194,24 @@
                         aliquam voluptatem veniam, est atque cumque eum delectus sint!
                     </p>
                 </div>
+
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Seguinos</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> <a target="_blank" href="https://www.facebook.com/ungarelli.muebles" class="btn btn-block btn-social btn-twitter">
+                                <span class="fa fa-facebook"></span> Facebook
+                            </a>
+                        </li>
+
+                        <li class="list-group-item"> <a target="_blank" href="https://www.instagram.com/ungarellimuebles/" class="btn btn-block btn-social btn-twitter">
+                                <span class="fa fa-instagram"></span> Instagram
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
                 <!--Grid column-->
             </div>
             <!--Grid row-->
@@ -227,6 +225,7 @@
         </div>
         <!-- Copyright -->
     </footer>
+
     <script>
         // Automatic Slideshow - change image every 4 seconds
         var myIndex = 0;

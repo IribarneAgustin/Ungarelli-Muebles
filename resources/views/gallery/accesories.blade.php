@@ -3,7 +3,7 @@
 @section('contenido')
 
 <div class="text-center pt-5">
-    <h2>Estanterías metálicas</h2>
+    <h2>Accesorios</h2>
     <hr>
     <div class="row">
         @foreach($articles as $article)
