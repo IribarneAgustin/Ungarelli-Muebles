@@ -29,29 +29,22 @@
 </head>
 
 <body>
-  <!-- Navbar -->
   <div class="w3-top">
-    <div class="w3-bar w3-white w3-card">
+    <!-- Navbar -->
+    <div class="w3-center w3-card w3-white">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="/favicons//favicon.ico"></a>
-      <a href="/galeria/muebles" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Muebles de oficina</a>
-      <a href="/galeria/sillas" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Sillas y sillones</a>
-      <a href="/galeria/estanterías" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Estanterías metálicas</a>
-      <a href="/galeria/racks" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Racks</a>
-      <a href="/galeria/muebles metálicos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Muebles metálicos</a>
-      <a href="/galeria/seguridad" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Seguridad</a>
-      <a href="/galeria/accesorios" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Accesorios</a>
+      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="/favicons//favicon.ico">Inicio</a>
+      <a href="/nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Productos</a>
+      <a href="/servicios" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Servicios</a>
+      <a href="/contacto" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contacto</a>
     </div>
   </div>
   <!-- Navbar small -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="/galeria/muebles" class="w3-bar-item w3-button w3-padding-large">Muebles de oficina</a>
-    <a href="/galeria/sillas" class="w3-bar-item w3-button w3-padding-large">Sillas y sillones</a>
-    <a href="/galeria/estanterías" class="w3-bar-item w3-button w3-padding-large">Estanterías metálicas</a>
-    <a href="/galeria/racks" class="w3-bar-item w3-button w3-padding-large">Racks</a>
-    <a href="/galeria/muebles metálicos" class="w3-bar-item w3-button w3-padding-large">Muebles metálicos</a>
-    <a href="/galeria/seguridad" class="w3-bar-item w3-button w3-padding-large">Seguridad</a>
-    <a href="/galeria/accesorios" class="w3-bar-item w3-button w3-padding-large">Accesorios</a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large"><img src="/favicons//favicon.ico">Inicio</a>
+    <a href="#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large ">Productos</a>
+    <a href="#servicios" class="w3-bar-item w3-button w3-padding-large">Servicios</a>
+    <a href="#contacto" class="w3-bar-item w3-button w3-padding-large">Contacto</a>
   </div>
 
   <div style="background-color: #FFFFFF">

@@ -7,6 +7,7 @@
 @stop
 
 @section('content')
+
 <form action="/articles/{{$article->id}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
@@ -37,8 +38,8 @@
     </div>
     <br>
     <div class="form-group">
-        <a href="/articles" class="btn btn-primary">Cancelar</a>
         <button type="submit" class="btn btn-primary">Modificar</button>
+        <a href="/articles" class="btn btn-danger">Cancelar</a>
     </div>
 </form>
 @stop
