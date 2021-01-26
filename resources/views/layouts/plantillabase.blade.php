@@ -33,7 +33,7 @@
     <!-- Navbar -->
     <div class="w3-center w3-card w3-white">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="/favicons//favicon.ico">Inicio</a>
+      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Inicio</a>
       <a href="/nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Productos</a>
       <a href="/servicios" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Servicios</a>
       <a href="/contacto" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contacto</a>

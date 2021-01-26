@@ -33,7 +33,7 @@
     <div class="w3-top">
         <div class="w3-center w3-card w3-white">
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img src="/favicons//favicon.ico">Inicio</a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Inicio</a>
             <a href="#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Productos</a>
             <a href="#servicios" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Servicios</a>
             <a href="#contacto" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contacto</a>
@@ -71,64 +71,144 @@
     <!-- Header -->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
 
-        <div class="carousel-inner">
+        <div class="carousel-inner" style=" width:100%; height: 500px !important;">
             <div class="carousel-item active" data-bs-interval="1500">
-                <img src="./image/b.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="1500">
                 <img src="./image/carousel.jpg" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item" data-bs-interval="1500">
-                <img src="./image/a.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-    </div>
-    <!--
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <img src="./image/a.jpg" class="d-block w-100">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Los mejores muebles para oficina del mercado</h5>
-                    <p>Más de 100 años de experiencia</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./image/carousel.jpg" class="d-block w-100">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Reparaciones de sillas</h5>
-                    <p>Contamos con más de 20 años de experiencia en la reparación de sillas de oficina</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./image/b.jpg" class="d-block w-100">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Reparaciones de sillas</h5>
-                    <p>Contamos con más de 20 años de experiencia en la reparación de sillas de oficina</p>
-                </div>
-            </div>
-
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
         </div>
     </div>
 
--->
-    <!-- Servicios -->
+
+    <!-- Artículos -->
     <div class="container mt-4">
         <div class="text-center pt-3">
-            <h2 id="servicios">Servicios</h2>
+            <h2 id="nuestrosArticulos">Nuestros <b>Artículos</b></h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="text-center pt-3">
+                    <h3>Muebles de oficina</h3>
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" style=" width:100%; height: 200px !important;">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                            <img src="./image/5911.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <img src="./image/5928.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-3">
+                    <a type="button" href="galeria/muebles" class="btn btn-warning"> Ver galería</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="text-center pt-3">
+                    <h3>Sillas y sillones</h3>
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" style=" width:100%; height: 300px !important;">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                            <img src="./image/sillas.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <img src="./image/sillas.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-3">
+                    <a type="button" href="galeria/muebles" class="btn btn-warning"> Ver galería</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="text-center pt-3">
+                    <h3>Estanterías</h3>
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" style=" width:100%; height: 550px !important;">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                            <img src="./image/estanteria.jpg" class="d-block w-100" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="text-center pt-3">
+                    <a type="button" href="galeria/muebles" class="btn btn-warning"> Ver galería</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="text-center pt-3">
+                    <h3>Racks</h3>
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="./image/rack.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-3">
+                    <a type="button" href="galeria/racks" class="btn btn-warning"> Ver galería</a>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <div class="text-center pt-3">
+                    <h3>Muebles metálicos</h3>
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" style=" width:100%; height: 300px !important;">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="./image/guardarropas.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-3">
+                    <a type="button" href="galeria/muebles metálicos" class="btn btn-warning"> Ver galería</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="text-center pt-3">
+                    <h3>Seguridad</h3>
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" style=" width:100%; height: 300px !important;">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="./image/gavetal.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="./image/seguridad.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-3">
+                    <a type="button" href="galeria/seguridad" class="btn btn-warning"> Ver galería</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="text-center pt-3">
+                    <h3>Accesorios</h3>
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="./image/percheros.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-3">
+                    <a type="button" href="galeria/accesorios" class="btn btn-warning"> Ver galería</a>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+        <!-- Servicios -->
+
+        <div class="text-center pt-3">
+            <h2 id="servicios"><b>Servicios</b></h2>
             <br>
         </div>
         <div class="row">
@@ -151,146 +231,12 @@
                 </div>
             </div>
         </div>
-        <br>
-        <!-- Artículos -->
-        <div class="container mt-4">
-            <div class="text-center pt-3">
-                <h2 id="nuestrosArticulos">Nuestros Artículos</h2>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="text-center pt-3">
-                        <h3>Muebles de oficina</h3>
-                    </div>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner ">
-                            <div class="carousel-item active" data-bs-interval="6000">
-                                <img src="./image/b.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="6000">
-                                <img src="./image/a.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center pt-3">
-                        <a type="button" href="galeria/muebles" class="btn btn-warning"> Ver galería</a>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-center pt-3">
-                        <h3>Sillas y sillones</h3>
-                    </div>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="./image/b.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="./image/a.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center pt-3">
-                        <a type="button" href="galeria/sillas" class="btn btn-warning"> Ver galería</a>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-center pt-3">
-                        <h3>Estanterías</h3>
-                    </div>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="./image/b.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="./image/a.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center pt-3">
-                        <a type="button" href="galeria/estanterías" class="btn btn-warning"> Ver galería</a>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-center pt-3">
-                        <h3>Racks</h3>
-                    </div>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="./image/b.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="./image/a.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center pt-3">
-                        <a type="button" href="galeria/racks" class="btn btn-warning"> Ver galería</a>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-center pt-3">
-                        <h3>Muebles metálicos</h3>
-                    </div>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="./image/b.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="./image/a.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center pt-3">
-                        <a type="button" href="galeria/muebles metálicos" class="btn btn-warning"> Ver galería</a>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-center pt-3">
-                        <h3>Seguridad</h3>
-                    </div>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="./image/b.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="./image/a.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center pt-3">
-                        <a type="button" href="galeria/seguridad" class="btn btn-warning"> Ver galería</a>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="text-center pt-3">
-                        <h3>Accesorios</h3>
-                    </div>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="./image/b.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="./image/a.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center pt-3">
-                        <a type="button" href="galeria/accesorios" class="btn btn-warning"> Ver galería</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
     </div>
+    <hr>
     <!-- Quienes somos -->
 
     <div class="container-fluid nosotros bg-primary ">
+
         <div class="row align-items-center">
             <div class="col-md-6 img-nosotros imagen-bg"></div>
             <div class="col-md-6 text-nosotros text-light">
@@ -330,18 +276,100 @@
         </div>
     </div>
 
-    <div class="container mt-4">
+    <!-- Logo -->
 
+    <div class="container mt-4">
         <div class="text-center">
             <img src="logo/logo.png">
         </div>
         <br>
+
+        <div class="d-flex justify-content-center">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="./image/comienzos.jpg" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="./image/comienzos2.jpg" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="./image/cortadora.jpg" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="./image/comienzos3.jpg" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="./image/comienzos4.jpg" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+
+
+        </div>
+
+        <!--
+        <div class="d-flex justify-content-center">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" style=" width:auto; height: 350px !important;" role="listbox">
+                    <div class="carousel-item active">
+                        <img src="./image/comienzos.jpg" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Los comienzos del taller</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/comienzos2.jpg" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Decada del 60</h5>
+                            <p>Instalaciones metálicas</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/cortadora.jpg" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Coradora múltiple</h5>
+                            <p>De principios del siglo</p>
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+-->
     </div>
 
-
-
-
-
+    <br>
 
     <!-- Footer -->
     <footer class="bg-light text-center text-lg-start">
@@ -385,32 +413,13 @@
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2020 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        <div class="text-center p-3 text-dark" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2012-2021 Ungarelli Muebles
         </div>
         <!-- Copyright -->
     </footer>
 
     <script>
-        // Automatic Slideshow - change image every 4 seconds
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) {
-                myIndex = 1
-            }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 4000);
-        }
-
         // Used to toggle the menu on small screens when clicking on the menu button
         function myFunction() {
             var x = document.getElementById("navDemo");
@@ -429,6 +438,44 @@
             }
         }
     </script>
+
+
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
 
 
 </body>
