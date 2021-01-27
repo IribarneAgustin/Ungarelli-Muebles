@@ -1,10 +1,18 @@
 @extends('layouts.plantillabase')
-
+<!-- Header -->
+<div style="background-color: black; height: 100px">
+    <div class="text-center">
+        <br>
+        <h2 class="header">Sillas de <b>oficina</b> </h2>
+        <img src="/logo/logo.png" style=" width:auto; height: 50px !important;">
+    </div>
+</div>
 @section('contenido')
 
 <div class="text-center pt-5">
-    <h2>Sillas y sillones</h2>
+    <p>Con mas de 20 años de experiencia en las reparaciones de sillas, ofrecemos una garantía inigualable en todas las sillas y sillones que disponemos para su venta</p>
     <hr>
+</div>
     <div class="row">
         @foreach($articles as $article)
         <div class="col-md-6 col-lg-4" style="padding:10px">

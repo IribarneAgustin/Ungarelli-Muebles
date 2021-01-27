@@ -1,10 +1,20 @@
 @extends('layouts.plantillabase')
 
+<!-- Header -->
+<div style="background-color: black; height: 100px">
+    <div class="text-center">
+        <br>
+        <h2 class="header">Racks</h2>
+        <img src="/logo/logo.png" style=" width:auto; height: 50px !important;">
+    </div>
+</div>
+
 @section('contenido')
 
 <div class="text-center pt-5">
-    <h2>Racks</h2>
+    <p>Consulte sus necesidades y podremos aconsejar la mejor opción que se adapte a lo que necesite</p>
     <hr>
+</div>
     <div class="row">
         @foreach($articles as $article)
         <div class="col-md-6 col-lg-4" style="padding:10px">

@@ -22,29 +22,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/stylefonts.css">
 
   <title>Ungarelli Muebles | Galería</title>
+
 </head>
 
 <body>
   <div class="w3-top">
     <!-- Navbar -->
-    <div class="w3-center w3-card w3-white">
+    <div class="w3-left w3-card w3-white">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Inicio</a>
-      <a href="/nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Productos</a>
-      <a href="/servicios" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Servicios</a>
-      <a href="/contacto" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contacto</a>
+      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Volver
+      </a>
     </div>
   </div>
   <!-- Navbar small -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="/" class="w3-bar-item w3-button w3-padding-large"><img src="/favicons//favicon.ico">Inicio</a>
-    <a href="#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large ">Productos</a>
-    <a href="#servicios" class="w3-bar-item w3-button w3-padding-large">Servicios</a>
-    <a href="#contacto" class="w3-bar-item w3-button w3-padding-large">Contacto</a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large">Inicio</a>
   </div>
 
   <div style="background-color: #FFFFFF">

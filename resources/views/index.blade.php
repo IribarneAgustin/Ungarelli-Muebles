@@ -27,11 +27,11 @@
 
 </head>
 
-
 <body>
     <!-- Navbar -->
     <div class="w3-top">
         <div class="w3-center w3-card w3-white">
+            <img src="/logo/logo.png" style=" width:auto; height: 40px !important;">
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Inicio</a>
             <a href="#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Productos</a>
@@ -118,7 +118,7 @@
                     </div>
                 </div>
                 <div class="text-center pt-3">
-                    <a type="button" href="galeria/muebles" class="btn btn-warning"> Ver galería</a>
+                    <a type="button" href="galeria/sillas" class="btn btn-warning"> Ver galería</a>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <div class="text-center pt-3">
-                    <a type="button" href="galeria/muebles" class="btn btn-warning"> Ver galería</a>
+                    <a type="button" href="galeria/estanterías" class="btn btn-warning"> Ver galería</a>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -284,89 +284,46 @@
         </div>
         <br>
 
-        <div class="d-flex justify-content-center">
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
 
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="./image/comienzos.jpg" style="width:100%">
-                    <div class="text">Caption Text</div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner" style=" width:auto; height: 350px !important;" role="listbox">
+                <div class="carousel-item active">
+                    <img src="./image/comienzos.jpg" class="d-block w-100">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Los comienzos del taller</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./image/comienzos2.jpg" class="d-block w-100">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Decada del 60</h5>
+                        <p>Instalaciones metálicas</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./image/cortadora.jpg" class="d-block w-100">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Coradora múltiple</h5>
+                        <p>De principios del siglo</p>
+                    </div>
                 </div>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="./image/comienzos2.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="./image/cortadora.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="./image/comienzos3.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="./image/comienzos4.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
             </div>
-            <br>
-
-
-
         </div>
 
-        <!--
-        <div class="d-flex justify-content-center">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" style=" width:auto; height: 350px !important;" role="listbox">
-                    <div class="carousel-item active">
-                        <img src="./image/comienzos.jpg" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Los comienzos del taller</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./image/comienzos2.jpg" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Decada del 60</h5>
-                            <p>Instalaciones metálicas</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./image/cortadora.jpg" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Coradora múltiple</h5>
-                            <p>De principios del siglo</p>
-                        </div>
-                    </div>
+    </div>
 
-                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
--->
     </div>
 
     <br>
@@ -406,17 +363,13 @@
 
 
                 </div>
-                <!--Grid column-->
             </div>
-            <!--Grid row-->
         </div>
-        <!-- Grid container -->
 
         <!-- Copyright -->
         <div class="text-center p-3 text-dark" style="background-color: rgba(0, 0, 0, 0.2)">
             © 2012-2021 Ungarelli Muebles
         </div>
-        <!-- Copyright -->
     </footer>
 
     <script>
@@ -436,43 +389,6 @@
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-        }
-    </script>
-
-
-
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
         }
     </script>
 
