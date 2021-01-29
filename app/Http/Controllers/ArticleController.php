@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Article;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Category;
+
 class ArticleController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
-        
     }
     public function index()
     {
@@ -30,7 +30,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $article = new Article();
-      
+
         $request->validate(
             ['image' => 'required|image']
         );
@@ -44,6 +44,12 @@ class ArticleController extends Controller
         $article->description = $request->get('description');
         $article->image = $url;
         $article->categoryId = $request->get('categoryId');
+
+        if ($request->get('premium') != null)
+            $article->premium = $request->get('premium');
+        else {
+            $article->premium = false;
+        }
 
         $article->save();
 
@@ -86,6 +92,11 @@ class ArticleController extends Controller
         $article->name = $request->get('name');
         $article->description = $request->get('description');
         $article->categoryId = $request->get('categoryId');
+        if ($request->get('premium') != null)
+            $article->premium = $request->get('premium');
+        else {
+            $article->premium = false;
+        }
 
         $article->save();
 
@@ -96,6 +107,6 @@ class ArticleController extends Controller
     {
         $article = Article::find($id);
         $article->delete();
-        return redirect('/articles')->with('delete','ok');
+        return redirect('/articles')->with('delete', 'ok');
     }
 }

@@ -19,6 +19,7 @@ class CreateArticlesTable extends Migration
             $table->text('description');
             $table->string('image');
             $table->unsignedBigInteger('categoryId');               
+            $table->boolean('premium')->nullable();               
             $table->foreign('categoryId')->references('id')->on('categories')->onDelete('cascade');  
             $table->timestamps();
         });

@@ -32,11 +32,28 @@
         </select>
 
     </div>
+
+    <label class="form-label" for="flexCheckDefault">Subcategoría (opcional)</label>
+    <br>
+
+    <div class="form-check">
+        <input name="premium" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            Artículo premium
+        </label>
+    </div>
+
+
+
+
     <br>
     <div class="form-group">
-        <a href="/articles" class="btn btn-primary">Cancelar</a>
         <button type="submit" class="btn btn-primary">Agregar</button>
+        <a href="/articles" class="btn btn-danger">Cancelar</a>
     </div>
+
+
+
 </form>
 @stop
 

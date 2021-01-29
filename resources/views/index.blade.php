@@ -73,7 +73,7 @@
 
         <div class="carousel-inner" style=" width:100%; height: 500px !important;">
             <div class="carousel-item active" data-bs-interval="1500">
-                <img src="./image/carousel.jpg" class="d-block w-100" alt="...">
+                <img src="./image/a.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
     </div>

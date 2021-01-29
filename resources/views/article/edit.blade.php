@@ -28,19 +28,35 @@
         <label for="exampleFormControlSelect1">Categoría</label>
         <select name="categoryId" class="form-control" id="exampleFormControlSelect1" required>
             @foreach ($categories as $categorie)
-                @if($category->id == $categorie->id )
-                <option selected="true" value="{{$categorie->id}}"> {{$categorie->name}}</option>
-                @else
-                <option value="{{$categorie->id}}"> {{$categorie->name}} </option>
-                @endif
+            @if($category->id == $categorie->id )
+            <option selected="true" value="{{$categorie->id}}"> {{$categorie->name}}</option>
+            @else
+            <option value="{{$categorie->id}}"> {{$categorie->name}} </option>
+            @endif
             @endforeach
         </select>
     </div>
+    <div class="form-check">
+        @if($article->premium == 1)
+        <input checked="true" name="premium" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            Artículo premium
+        </label>
+        @else
+        <input name="premium" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            Artículo premium
+        </label>
+        @endif
+
+    </div>
+
     <br>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Modificar</button>
         <a href="/articles" class="btn btn-danger">Cancelar</a>
     </div>
+
 </form>
 @stop
 
