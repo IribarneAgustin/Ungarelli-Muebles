@@ -15,7 +15,7 @@
     <p>Contamos con lo mejor en fabricación nacional para tus muebles de oficina</p>
     <hr>
 </div>
-<div class="row">
+<div class="row" style="background-color:whitesmoke">
     <div class="col-md-6 col-lg-4">
         <h3 class="text-center">Colores línea <b>Classic</b></h3>
         <br>
@@ -49,6 +49,7 @@
             </div>
         </div>
     </div>
+    <span style="opacity:0;">hidden text</span>
 </div>
 <div class="text-center pt-5">
     <h2>Muebles línea <b>Classic</b></h2>
