@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Mail\ContactMailable;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -81,5 +83,12 @@ class HomeController extends Controller
         }
 
         return $id;
+    }
+
+    public function contact(Request $request)
+    {
+        $correo = new ContactMailable($request->all());
+        Mail::to("agusiri96@yahoo.com")->send($correo);
+        return redirect('/')->with('message','Mensaje enviado');
     }
 }

@@ -18,16 +18,22 @@
     <link rel="icon" href="favicons/favicon.ico" type="image/ico" />
     <title>Ungarelli Muebles</title>
 
+    <!-- Fonts awesome -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/stylefonts.css">
 
     <!-- Leaflet Maps -->
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <!--Sweet Alert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+
 </head>
 
 <body>
@@ -260,17 +266,16 @@
             </div>
         </div>
     </div>
-
-    <!-- Logo -->
+    <!-- Historia -->
 
     <div class="container mt-4">
         <div class="text-center">
             <img src="logo/logo.png">
         </div>
         <br>
-    </div>
-    <br>
-    <div class="container mt-4">
+
+        <br>
+
         <div class="d-flex justify-content-center">
             <div class="slider">
                 <ul class="slides">
@@ -293,9 +298,8 @@
 
     <hr>
 
-
     <!-- Footer -->
-    <footer class="bg-light text-center text-lg-start">
+    <footer class="text-center text-lg-start">
         <div class="container p-4">
             <div class="row">
                 <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
@@ -311,10 +315,6 @@
                             <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
                             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
                         </svg> Lunes a viernes 9:00 - 16:00 / Sábados 9:00 - 13:00</p>
-                    <!--  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
-                    </svg>
-                    -->
                     <hr>
                     <div class="text-center" style="background-color: #3B5998">
 
@@ -328,8 +328,88 @@
                             <h5>Instagram</h5>
                         </a>
 
-                    </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-block btn-social" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <span class="fa fa-envelope"></span>
+                            <h5>Email</h5>
+                        </button>
 
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <!--Contact form-->
+
+                                        <form action="{{'contact'}}" method="post">
+                                            @csrf
+                                            <div class="card border-primary rounded-0">
+                                                <div class="card-header p-0">
+                                                    <div class="bg-info text-white text-center py-2">
+                                                        <h3><i class="fa fa-envelope"></i> Contactenos</h3>
+                                                        <p class="m-0">Con gusto te ayudaremos</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-body p-3">
+                                                    <!--Body-->
+                                                    <div class="form-group">
+                                                        <div class="input-group mb-2">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                                            </div>
+                                                            <input type="text" class="form-control" id="nombre" name="name" placeholder="Nombre y Apellido" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="input-group mb-2">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
+                                                            </div>
+                                                            <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@gmail.com" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="input-group mb-2">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                                            </div>
+                                                            <textarea class="form-control" name="message" placeholder="Envianos tu Mensaje" required></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="text-center">
+                                                        <input type="submit" value="Enviar" class="btn btn-primary">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            @if (session('message'))
+                                            <script>
+                                                Swal.fire(
+                                                    'Mensaje enviado correctamente',
+                                                    'Pronto recibirá una respueta a su correo electrónico',
+                                                    'success'
+                                                )
+                                            </script>
+                                            @endif
+
+
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
                 <!-- Map -->
@@ -351,7 +431,6 @@
 
     <script>
         window.addEventListener('load', () => {
-
 
             // initial slide
             let slide = 1;
