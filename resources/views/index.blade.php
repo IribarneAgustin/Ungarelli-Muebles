@@ -25,6 +25,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/stylefonts.css">
+    <link rel="stylesheet" href="/css/stylefonts.css">
+
+    <!-- Java script code-->
+    <script type="text/javascript" src="/js/scripts.js"></script>
 
     <!-- Leaflet Maps -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
@@ -114,15 +118,9 @@
             </div>
             <div class="col-sm-6">
                 <div class="text-center pt-3">
-                    <h3>Estanterías</h3>
+                    <h3>Racks</h3>
                 </div>
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" style=" width:100%; height: 400px !important;">
-                        <div class="carousel-item active" data-bs-interval="4000">
-                            <img src="./image/estanterias.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                </div>
+                <img src="./image/estanterias.jpg" class="d-block w-100" alt="..." style=" width:100%; height: 400px !important;">
                 <div class="text-center pt-3">
                     <a type="button" href="galeria/estanterías" class="btn btn-warning"> Ver galería</a>
                 </div>
@@ -131,18 +129,12 @@
                 <div class="text-center pt-3">
                     <h3>Racks</h3>
                 </div>
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="3000">
-                            <img src="./image/rack.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                </div>
+                <img src="./image/rack.jpg" class="d-block w-100" alt="..." style=" width:100%; height: 400px !important;">
                 <div class="text-center pt-3">
                     <a type="button" href="galeria/racks" class="btn btn-warning"> Ver galería</a>
                 </div>
-
             </div>
+
             <div class="col-sm-6">
                 <div class="text-center pt-3">
                     <h3>Muebles metálicos</h3>
@@ -224,6 +216,7 @@
             </div>
         </div>
     </div>
+
     <hr>
 
     <!-- Quienes somos -->
@@ -430,62 +423,6 @@
     </footer>
 
     <script>
-        window.addEventListener('load', () => {
-
-            // initial slide
-            let slide = 1;
-
-            // total slides
-            let slides = document.querySelectorAll(".slider ul li");
-            total = slides.length;
-
-            // show first side
-            showSlide(1);
-
-            next = document.querySelector(".next");
-            prev = document.querySelector(".prev")
-
-            /**
-             * event next button
-             */
-            next.addEventListener('click', (evt) => {
-                evt.preventDefault();
-                slide++;
-                if (slide > total) {
-                    slide = 1;
-                }
-                showSlide(slide);
-            })
-
-            /** 
-             * event prev button
-             */
-            prev.addEventListener("click", (evt) => {
-                evt.preventDefault();
-                slide--;
-                if (slide < 1) {
-                    slide = total;
-                }
-                showSlide(slide);
-            })
-
-            /**
-             * show slides
-             * 
-             * @param {number} n 
-             * @return {null}
-             * 
-             */
-            function showSlide(n) {
-                n--; // decrement 1
-                for (i = 0; i < slides.length; i++) {
-                    (i == n) ? slides[n].style.display = "block": slides[i].style.display = "none";
-                }
-            }
-
-        })
-    </script>
-    <script>
         var mymap = L.map('mapid').setView([-38.00885, -57.56277], 13);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWd1c2lyaSIsImEiOiJja2tuYTloazMyYjZpMm5ud2N4M2d6anRlIn0.vCENfiMBKD7bm04FceNLsw', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -499,30 +436,6 @@
         var marker = L.marker([-38.00885, -57.56277]).addTo(mymap);
         marker.bindPopup("<b>Ungarelli Muebles</b><br> Av. Independencia 3244").openPopup();
     </script>
-
-
-
-    <script>
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        var modal = document.getElementById('ticketModal');
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
-
 
 </body>
 

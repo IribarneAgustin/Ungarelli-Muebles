@@ -7,46 +7,51 @@
 @stop
 
 @section('content')
-<a href="articles/create" class="btn btn-primary">Agregar</a>
-<hr>
-<table id="articles" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%">
-    <thead class="bg-primary text-white">
-        <tr>
-            <th scope="col" style="width: 5%">Id</th>
-            <th scope="col" style="width: 10%">Categoría</th>
-            <th scope="col" style="width: 20%">Nombre</th>
-            <th scope="col" style="width: 20%">Descripción</th>
-            <th scope="col" style="width: 20%">Imagen</th>
-            <th scope="col" style="width: 20%"></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($articles as $article)
-        <tr>
-            <td> {{$article->id}} </td>
-            @foreach ($categories as $category)
-            @if($category->id == $article->categoryId)
-            <td>{{$category->name}} </td>
-            @endif
+<div class="content">
+    <a href="articles/create" class="btn btn-primary">Agregar</a>
+    <hr>
+    <table id="articles" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%">
+        <thead class="bg-primary text-white">
+            <tr>
+                <th scope="col" style="width: 5%">Id</th>
+                <th scope="col" style="width: 10%">Categoría</th>
+                <th scope="col" style="width: 5%">Premium</th>
+                <th scope="col" style="width: 10%">Nombre</th>
+                <th scope="col" style="width: 20%">Descripción</th>
+                <th scope="col" style="width: 20%">Imagen</th>
+                <th scope="col" style="width: 20%"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($articles as $article)
+            <tr>
+                <td> {{$article->id}} </td>
+                @foreach ($categories as $category)
+                @if($category->id == $article->categoryId)
+                <td>{{$category->name}} </td>
+                @endif
+                @endforeach
+                <td> @if ($article->premium == 1) Si
+                    @else No
+                    @endif </td>
+                <td> {{$article->name}} </td>
+                <td> {{$article->description}} </td>
+                <td> <img src="{{asset($article->image)}}" width="100%" height="auto"></td>
+                <td>
+                    <form action="{{ route('articles.destroy',$article->id) }}" method="post" class="delete-form">
+                        <a href="/articles/{{$article->id}}/edit" style="width: 40%" class="btn btn-info">Editar</a>
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" style="width: 40%" class="btn btn-danger">Borrar</button>
+                    </form>
+                </td>
+            </tr>
             @endforeach
-            <td> {{$article->name}} </td>
-            <td> {{$article->description}} </td>
-            <td> <img src="{{asset($article->image)}}" width="100%" height="auto"></td>
-            <td>
-                <form action="{{ route('articles.destroy',$article->id) }}" method="post" class="delete-form">
-                    <a href="/articles/{{$article->id}}/edit" style="width: 40%" class="btn btn-info">Editar</a>
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" style="width: 40%" class="btn btn-danger">Borrar</button>
-                </form>
-            </td>
-        </tr>
-        @endforeach
 
-    </tbody>
+        </tbody>
 
-</table>
-
+    </table>
+</div>
 
 
 @stop
@@ -65,21 +70,21 @@
 
 <!-- Datatables -->
 <script>
-   
-        $('#articles').DataTable({
-            "language": {
+    $('#articles').DataTable({
+        "language": {
             "lengthMenu": "Mostrar _MENU_ registros por página",
             "zeroRecords": "Nada encontrado - disuclpa",
             "info": "Mostrando la página _PAGE_ de _PAGES_",
             "infoEmpty": "No se encontró ningún registro",
             "infoFiltered": "(filtrado de _MAX_ registros totales)",
             "search": "Buscar:",
-            "paginate": {'next' : "Siguiente", 'previous' : "Anterior"}
+            "paginate": {
+                'next': "Siguiente",
+                'previous': "Anterior"
+            }
         }
 
-        });
-
-   
+    });
 </script>
 
 

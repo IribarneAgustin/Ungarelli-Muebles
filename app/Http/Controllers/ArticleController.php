@@ -17,7 +17,6 @@ class ArticleController extends Controller
     {
         $articles = Article::all();
         $categories = Category::all();
-        //return view('article.index')->with('articles',$articles);
         return view('article.index', ['articles' => $articles, 'categories' => $categories]);
     }
 
@@ -69,8 +68,6 @@ class ArticleController extends Controller
         $categories = Category::all();
 
         return view('article.edit', ['article' => $article, 'category' => $category, 'categories' => $categories]);
-
-        //return view('article.edit')->with('article', $article);
     }
 
     public function update(Request $request, $id)

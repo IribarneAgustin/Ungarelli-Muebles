@@ -85,6 +85,8 @@ class HomeController extends Controller
         return $id;
     }
 
+    /* Metodo para enviar emails */
+
     public function contact(Request $request)
     {
         $correo = new ContactMailable($request->all());
