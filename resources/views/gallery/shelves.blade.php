@@ -5,7 +5,7 @@
     <div class="text-center">
         <br>
         <h2 class="header">Estanterías <b>metálicas</b> </h2>
-        <img src="/logo/logo.png" style=" width:auto; height: 50px !important;">
+        <img src="/logo/ungarelli small.png"  style=" width:auto; height: 50px !important;">
     </div>
 </div>
 

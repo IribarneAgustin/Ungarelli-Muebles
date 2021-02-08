@@ -36,25 +36,24 @@
     <!--Sweet Alert 2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-
-
 </head>
 
 <body>
     <!-- Navbar -->
     <div class="w3-top">
-        <div class="w3-center w3-card w3-white">
-            <img src="/logo/logo.png" style=" width:auto; height: 40px !important;">
+        <div class="w3-center w3-card w3-white" style="opacity:80%">
+            <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img class="w3-bar-item w3-hide-small" src="/logo/ungarelli small.png" style=" width:auto; height: 60px !important;"></a>
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Inicio</a>
-            <a href="#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Productos</a>
-            <a href="#servicios" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Servicios</a>
-            <a href="#contacto" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contacto</a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Inicio</strong></a>
+            <a href="#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Productos</strong></a>
+            <a href="#servicios" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Servicios</strong></a>
+            <a href="#contacto" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Contacto</strong></a>
         </div>
     </div>
 
     <!-- Navbar small -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="/" class="w3-bar-item w3-button w3-padding-large ">Inicio</a>
         <a href="/#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large ">Productos</a>
         <a href="#servicios" class="w3-bar-item w3-button w3-padding-large">Servicios</a>
         <a href="#contacto" class="w3-bar-item w3-button w3-padding-large">Contacto</a>
@@ -62,10 +61,11 @@
 
     <!-- Header -->
 
-    <div style="width:100%; height: auto !important;">
-        <img src="./image/a.jpg" class="d-block w-100" alt="...">
-    </div>
 
+
+    <div style="width:100%; height: auto !important;">
+        <img src="./image/banner.png" class="d-block w-100 " alt="..." >
+    </div>
 
     <!-- Artículos -->
     <div class="container mt-4">
@@ -262,10 +262,9 @@
     <!-- Historia -->
 
     <div class="container mt-4">
-        <div class="text-center">
-            <img src="logo/logo.png">
+        <div class="d-flex justify-content-center">
+            <img src="/logo/ungarelli small.png" style="height:400px; width:auto">
         </div>
-        <br>
 
         <br>
 
@@ -436,6 +435,7 @@
         var marker = L.marker([-38.00885, -57.56277]).addTo(mymap);
         marker.bindPopup("<b>Ungarelli Muebles</b><br> Av. Independencia 3244").openPopup();
     </script>
+
 
 </body>
 
