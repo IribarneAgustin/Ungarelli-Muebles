@@ -36,6 +36,7 @@
             @endforeach
         </select>
     </div>
+    <label class="form-label" for="flexCheckDefault">Subcategoría (opcional)</label>
     <div class="form-check">
         @if($article->premium == 1)
         <input checked="true" name="premium" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
@@ -48,9 +49,7 @@
             Artículo premium
         </label>
         @endif
-
     </div>
-
     <br>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Modificar</button>

@@ -234,6 +234,36 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        ['header' => 'REPARACIONES'],
+        [
+            'text'        => 'Clientes',
+            'url'         => '/clients',
+            'icon'        => 'fas fa-users',
+            'label'       => 'Administrar',
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'En proceso',
+            'url'         => '/repairs/listInProcess',
+            'icon'        => 'fas fa-wrench',
+            'label'       => 'Administrar',
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'En tapicería',
+            'url'         => '/repairs',
+            'icon'        => 'fas fa-building',
+            'label'       => 'Administrar',
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Ver todas',
+            'url'         => '/repairs',
+            'icon'        => 'fas fa-home',
+            'label'       => 'Administrar',
+            'label_color' => 'success',
+        ],
+        ['header' => 'CONFIGURACIÓN DE LA PÁGINA'],
         [
             'text'        => 'Artículos',
             'url'         => '/articles',
@@ -246,7 +276,7 @@ return [
             'text' => 'Perfil',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
-        ],
+        ]
        
     ],
 

@@ -6,7 +6,7 @@
     @else
         @include('adminlte::partials.common.brand-logo-xs')
     @endif
-
+<
     {{-- Sidebar menu --}}
     <div class="sidebar">
         <nav class="mt-2">

@@ -13,6 +13,8 @@ Route::get('register', function () {
 
 Route::get('/', [HomeController::class, 'index']);
 Route::resource('articles', 'App\Http\Controllers\ArticleController');
+Route::resource('clients', 'App\Http\Controllers\ClientController');
+Route::resource('repairs', 'App\Http\Controllers\RepairController');
 Route::get('/galeria/muebles', [HomeController::class, 'furnitureGallery']);
 Route::get('/galeria/sillas', [HomeController::class, 'chairsGallery']);
 Route::get('/galeria/estanterías', [HomeController::class, 'shelvesGallery']);

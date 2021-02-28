@@ -53,10 +53,11 @@
 
     <!-- Navbar small -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="/" class="w3-bar-item w3-button w3-padding-large ">Inicio</a>
-        <a href="/#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large ">Productos</a>
-        <a href="#servicios" class="w3-bar-item w3-button w3-padding-large">Servicios</a>
-        <a href="#contacto" class="w3-bar-item w3-button w3-padding-large">Contacto</a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large ">Inicio</a>
+            <a href="/#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large ">Productos</a>
+            <a href="#servicios" class="w3-bar-item w3-button w3-padding-large">Servicios</a>
+            <a href="#contacto" class="w3-bar-item w3-button w3-padding-large">Contacto</a>
+        </div>
     </div>
 
     <!-- Header -->
@@ -64,7 +65,7 @@
 
 
     <div style="width:100%; height: auto !important;">
-        <img src="./image/banner.png" class="d-block w-100 " alt="..." >
+        <img src="./image/banner.png" class="d-block w-100 " alt="...">
     </div>
 
     <!-- Artículos -->
