@@ -3,44 +3,83 @@
 @section('title', 'Admin')
 
 @section('content_header')
-<h1>Reparaciones de {{$client->name}} </h1> 
+<h1>Reparaciones de {{$client->name}} </h1>
+
 @stop
 
 @section('content')
 <div class="content">
-    <form action="/repairs/create"  method="get">
+    <form action="/repairs/create" method="get">
         @csrf
         <input name="clientId" type="hidden" value="{{$client->id}}">
         <button class="btn btn-primary" type="submit">Agregar</button>
     </form>
     <hr>
-    <table id="repairs" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%">
+    <table id="repairs" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%;padding:2px">
         <thead class="bg-primary text-white">
             <tr>
-                <th scope="col" style="width: 5%">Id</th>
+                <th scope="col" style="width: 1%">Id</th>
                 <th scope="col" style="width: 10%">Fecha</th>
                 <th scope="col" style="width: 20%">Descripción</th>
+                <th scope="col" style="width: 5%">Seña</th>
                 <th scope="col" style="width: 10%">Estado</th>
-                <th scope="col" style="width: 5%">Seña</th> 
-                <th scope="col" style="width: 10%"></th>
+                <th scope="col" style="width: 15%"></th>
             </tr>
         </thead>
         <tbody>
+
             @foreach ($repairs as $repair)
             @if ($repair->clientId == $client->id)
             <tr>
                 <td> {{$repair->id}} </td>
-                <td> {{$repair->created_at}} </td>
-                <td> {{$repair->description}} </td>
-                <td> {{$repair->status}} </td>
-                <td>  <!-- {{$repair->paymentSign}}--> </td> 
                 <td>
-                    <form action="{{ route('repairs.destroy',$repair->id) }}" method="post" class="delete-form">
-                        <a href="/repairs/{{$repair->id}}/edit" style="width: 40%" class="btn btn-info">Editar</a>
+                    @if ($repair->created_at != "")
+                    @foreach(explode(' ', $repair->created_at) as $info)
+                    <option>{{date('d-m-Y', strtotime($info))}}</option>
+                    @break
+                    @endforeach
+                    @endif
+                </td>
+                <td> {{$repair->description}} </td>
+                <td> {{$repair->paymentSign}} </td>
+
+
+                <td>
+                    @if ($repair->status != "Entregada")
+                    <form action="{{ route('changeStatus') }}" method="post">
                         @csrf
-                        @method('DELETE')
-                        <button type="submit" style="width: 40%" class="btn btn-danger">Borrar</button>
+                        <input name="id" type="hidden" value="{{$repair->id}}">
+                        <select class="form-select" name="status">
+                            <option name="status" selected value="{{$repair->status}}">{{$repair->status}}</option>
+                            @foreach($statusList as $status)
+                            @if ($repair->status != $status)
+                            <option value="{{$status}}" name="status">{{$status}}</option>
+                            @endif
+                            @endforeach
+                        </select>
+                        <br>
+                        <button type="submit" class="btn btn-warning" style="width:100%">Cambiar</button>
+                        @if ($repair->status == 'Terminada')
+                        <hr>
+                        <a target="_blank" class="btn btn-success" href="https://web.whatsapp.com/">Avisar por WhatsApp! </a>
+                        @endif
+
                     </form>
+                    @else
+                    <b> {{$repair->status}} </b>
+                    @endif
+
+
+                </td>
+                <td>
+                    <div class="text-center">
+                        <form action="{{ route('repairs.destroy',$repair->id) }}" method="post" class="delete-form">
+                            <a href="/repairs/{{$repair->id}}/edit" style="width: 40%" class="btn btn-info">Editar</a>
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" style="width: 40%" class="btn btn-danger">Borrar</button>
+                        </form>
+                    </div>
                 </td>
             </tr>
             @endif

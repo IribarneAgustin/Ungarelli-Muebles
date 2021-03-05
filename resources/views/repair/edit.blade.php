@@ -13,12 +13,16 @@
     @method('PUT')
     <div class="form-group">
         <label for="exampleInputEmail1">Descripción</label>
-        <textarea value="{{$repair->description}}" name="name" type="text" class="form-control" id="exampleInputEmail1">{{$repair->description}}</textarea>
+        <textarea value="{{ $repair->description }}" name="description" type="text" class="form-control" id="exampleInputEmail1" required>{{$repair->description}}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Seña</label>
+        <input value="{{$repair->paymentSign}}"  name="paymentSign" type="number" min="0" class="form-control" id="exampleInputEmail1">
     </div>
     <br>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Modificar</button>
-        <a href="{{ route('repairs.show',$repair->clientId) }}"class="btn btn-danger">Cancelar</a>
+        <a href="{{ route('repairs.show',$repair->clientId) }}" class="btn btn-danger">Cancelar</a>
     </div>
 
 </form>

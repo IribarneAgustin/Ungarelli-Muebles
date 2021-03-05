@@ -28,7 +28,8 @@
                 <td> {{$client->name}} </td>
                 <td> {{$client->phone}} </td>
                 <td> {{$client->email}} </td>
-                <td> <a style="width: 100%" class="btn btn-warning" href="{{ route('repairs.show',$client->id) }}">Ver reparaciones</a> </td>
+                <td> 
+                <a style="width: 100%" class="btn btn-warning" href="{{ route('repairs.show',$client->id) }}">Reparaciones</a> </td>
                 <td>
                     <form action="{{ route('clients.destroy',$client->id) }}" method="post" class="delete-form">
                         <a href="/clients/{{$client->id}}/edit" style="width: 40%" class="btn btn-info">Editar</a>

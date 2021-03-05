@@ -18,10 +18,9 @@ class CreateRepairsTable extends Migration
             $table->unsignedBigInteger('clientId'); 
             $table->timestamps();
             $table->text('description');
-            $table->string('status'); // Terminada/En proceso/En tapiceria
-            $table->boolean('comfirmed');
-            $table->foreign('clientId')->references('id')->on('clients')->onDelete('cascade');  
-
+            $table->string('status'); // Terminada/En proceso/En tapiceria/En espera
+            $table->string('paymentSign')->nullable();
+            $table->foreign('clientId')->references('id')->on('clients')->onDelete('cascade');
         });
     }
 

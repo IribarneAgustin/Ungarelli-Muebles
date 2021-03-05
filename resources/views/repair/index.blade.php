@@ -3,42 +3,40 @@
 @section('title', 'Admin')
 
 @section('content_header')
-<h1>Reparaciones</h1> 
+<h1>Reparaciones</h1>
 @stop
 
 @section('content')
 <div class="content">
     <hr>
-    <table id="repairs" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%">
+    <table id="repairs" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%;padding:2px">
         <thead class="bg-primary text-white">
             <tr>
-                <th scope="col" style="width: 5%">Id</th>
+                <th scope="col" style="width: 1%">Id</th>
+                <th scope="col" style="width: 10%">Cliente</th>
                 <th scope="col" style="width: 10%">Fecha</th>
                 <th scope="col" style="width: 20%">Descripción</th>
+                <th scope="col" style="width: 5%">Seña</th>
                 <th scope="col" style="width: 10%">Estado</th>
-                <th scope="col" style="width: 5%">Seña</th> 
-                <th scope="col" style="width: 10%"></th>
+
             </tr>
         </thead>
         <tbody>
+
             @foreach ($repairs as $repair)
             <tr>
                 <td> {{$repair->id}} </td>
+                @foreach ($clients as $client)
+                @if ($client->id == $repair->clientId)
+                <td> {{$client->name}} </td>
+                @endif
+                @endforeach
                 <td> {{$repair->created_at}} </td>
                 <td> {{$repair->description}} </td>
-                <td> {{$repair->status}} </td>
-                <td>  <!-- {{$repair->paymentSign}}--> </td> 
-                <td>
-                    <form action="{{ route('repairs.destroy',$repair->id) }}" method="post" class="delete-form">
-                        <a href="/repairs/{{$repair->id}}/edit" style="width: 40%" class="btn btn-info">Editar</a>
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" style="width: 40%" class="btn btn-danger">Borrar</button>
-                    </form>
-                </td>
-            </tr>
-          
+                <td> {{$repair->paymentSign}} </td>
+                <td> {{$repair->status}}</td>
 
+            </tr>
             @endforeach
 
         </tbody>

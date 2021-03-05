@@ -15,8 +15,9 @@ class RepairController extends Controller
 
     public function index()
     {
-        $repairs = Repair::all();
-        return view('repair.index', ['repairs' => $repairs]);
+        $repairs = Repair::orderBy('created_at', 'desc')->get();
+        $clients = Client::all();
+        return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
     }
 
     public function create(Request $request)
@@ -31,8 +32,7 @@ class RepairController extends Controller
         $repair->clientId = $request->get('clientId');
         $repair->status = $request->get('status');
         $repair->description = $request->get('description');
-        //  $repair->paymentSign = $request->get('payment sign');
-        $repair->comfirmed = 0;
+        $repair->paymentSign = $request->get('paymentSign');
 
         $repair->save();
 
@@ -41,14 +41,33 @@ class RepairController extends Controller
 
     public function show($clientId)
     {
-        $repairs = Repair::all();
+        $repairs = Repair::orderBy('created_at','desc')->get();
         $client = Client::find($clientId);
-        return view('repair.show', ['repairs' => $repairs], ['client' => $client]);
+
+        $statusList = ["En espera", "En proceso", "En tapicería", "Terminada", "Entregada"];
+        return view('repair.show', ['repairs' => $repairs], ['client' => $client])->with("statusList", $statusList);
     }
 
-    public function listInProcess(){
-        $repairs = Repair::all()->where('status','En proceso');
-        return view('repair.index', ['repairs' => $repairs]);
+    public function listInProcess()
+    {
+
+        $repairs = Repair::all()->where('status', 'En proceso');
+        $clients = Client::all();
+        return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
+    }
+    public function listInTapestry()
+    {
+
+        $repairs = Repair::all()->where('status', 'En tapicería');
+        $clients = Client::all();
+        return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
+    }
+    public function listOnHold()
+    {
+
+        $repairs = Repair::all()->where('status', 'En espera');
+        $clients = Client::all();
+        return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
     }
 
     public function edit($id)
@@ -60,7 +79,9 @@ class RepairController extends Controller
     public function update(Request $request, $id)
     {
         $repair = Repair::find($id);
+
         $repair->description = $request->get('description');
+        $repair->paymentSign = $request->get('paymentSign');
 
         $repair->save();
 
@@ -71,6 +92,15 @@ class RepairController extends Controller
     {
         $repair = Repair::find($id);
         $repair->delete();
+        return $this->show($repair->clientId);
+    }
+
+    public function changeStatus(Request $request)
+    {
+
+        $repair = Repair::find($request->get('id'));
+        $repair->status = $request->get('status');
+        $repair->save();
         return $this->show($repair->clientId);
     }
 }

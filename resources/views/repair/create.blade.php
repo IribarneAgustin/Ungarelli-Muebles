@@ -22,18 +22,17 @@
             <option name="status" value="En espera">En espera</option>
             <option name="status" value="En proceso">En proceso</option>
         </select>
-
     </div>
 
     <div class="form-group">
         <label for="exampleInputEmail1">Seña (opcional)</label>
-        <input name="payment sign" type="number" min="0" class="form-control" id="exampleInputEmail1">
+        <input name="paymentSign" type="number" min="0" class="form-control" id="exampleInputEmail1">
     </div>
 
     <br>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Agregar</button>
-        <a href="/repairs" class="btn btn-danger">Cancelar</a>
+        <a href="{{ route('repairs.show',$clientId) }}" class="btn btn-danger">Cancelar</a>
     </div>
 </form>
 
