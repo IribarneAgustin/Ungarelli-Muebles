@@ -25,7 +25,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/stylefonts.css">
-    <link rel="stylesheet" href="/css/stylefonts.css">
 
     <!-- Java script code-->
     <script type="text/javascript" src="/js/scripts.js"></script>
@@ -40,10 +39,11 @@
 
 <body>
     <!-- Navbar -->
+    
     <div class="w3-top">
         <div class="w3-center w3-card w3-white" style="opacity:80%">
             <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img class="w3-bar-item w3-hide-small" src="/logo/ungarelli small.png" style=" width:auto; height: 60px !important;"></a>
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"  style="width:100%" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Inicio</strong></a>
             <a href="#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Productos</strong></a>
             <a href="#servicios" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Servicios</strong></a>
@@ -52,17 +52,15 @@
     </div>
 
     <!-- Navbar small -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-            <a href="/" class="w3-bar-item w3-button w3-padding-large ">Inicio</a>
-            <a href="/#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large ">Productos</a>
-            <a href="#servicios" class="w3-bar-item w3-button w3-padding-large">Servicios</a>
-            <a href="#contacto" class="w3-bar-item w3-button w3-padding-large">Contacto</a>
-        </div>
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:60px"> 
+        <a href="/" class="w3-bar-item w3-button w3-padding-large ">Inicio</a>
+        <a href="/#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large ">Productos</a>
+        <a href="#servicios" class="w3-bar-item w3-button w3-padding-large">Servicios</a>
+        <a href="#contacto" class="w3-bar-item w3-button w3-padding-large">Contacto</a>
     </div>
+ 
 
     <!-- Header -->
-
-
 
     <div style="width:100%; height: auto !important;">
         <img src="./image/banner.png" class="d-block w-100 " alt="...">
@@ -291,6 +289,12 @@
 
     <hr>
 
+    <!-- Icono flotante de WhatsApp -->
+
+    <a href="https://api.whatsapp.com/send?phone=+5492236753244&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20artículos." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
     <!-- Footer -->
     <footer class="text-center text-lg-start">
         <div class="container p-4">
@@ -417,7 +421,7 @@
 
         <!-- Copyright -->
         <div class="text-center p-3 text-dark" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2012-2021 Ungarelli Muebles
+            © Ungarelli Muebles
         </div>
 
     </footer>

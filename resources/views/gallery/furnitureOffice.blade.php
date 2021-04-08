@@ -1,15 +1,16 @@
 @extends('layouts.plantillabase')
 
+
+@section('contenido')
+
 <!-- Header -->
-<div style="background-color: black; height: 100px">
+<div style="background-color: black; height: 100px" >
     <div class="text-center">
         <br>
         <h2 class="header">Muebles de <b>oficina</b> </h2>
-        <img src="/logo/ungarelli small.png"  style=" width:auto; height: 50px !important;">
+        <img src="/logo/ungarelli small.png" style=" width:auto; height: 50px !important;">
     </div>
 </div>
-
-@section('contenido')
 
 <div class="text-center pt-5">
     <p>Contamos con lo mejor en fabricación nacional para tus muebles de oficina</p>
@@ -66,7 +67,9 @@
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
                 </a>
                 <div class="card-body">
-                    <h6><b>{{$article->name}}</b></h6>
+                    <div class="text-center">
+                        <h6><b>{{$article->name}}</b></h6>
+                    </div>
                     <p class="text-muted card-text">{{$article->description}}</p>
                 </div>
             </div>
@@ -89,7 +92,9 @@
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
                 </a>
                 <div class="card-body">
-                    <h6><b>{{$article->name}}</b></h6>
+                    <div class="text-center">
+                        <h6><b>{{$article->name}}</b></h6>
+                    </div>
                     <p class="text-muted card-text">{{$article->description}}</p>
                 </div>
             </div>
