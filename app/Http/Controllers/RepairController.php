@@ -30,6 +30,9 @@ class RepairController extends Controller
     {
         $repair = new Repair();
         $repair->clientId = $request->get('clientId');
+        $repair->job = $request->get('job');
+        $repair->comments = $request->get('comments');
+        $repair->price = $request->get('price');
         $repair->status = $request->get('status');
         $repair->description = $request->get('description');
         $repair->paymentSign = $request->get('paymentSign');
@@ -69,6 +72,13 @@ class RepairController extends Controller
         $clients = Client::all();
         return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
     }
+    public function listFinished()
+    {
+
+        $repairs = Repair::all()->where('status', 'Terminada');
+        $clients = Client::all();
+        return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
+    }
 
     public function edit($id)
     {
@@ -103,4 +113,6 @@ class RepairController extends Controller
         $repair->save();
         return $this->show($repair->clientId);
     }
+
+   
 }

@@ -187,7 +187,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'articles',
+    'dashboard_url' => 'clients',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -243,6 +243,13 @@ return [
             'label_color' => 'success',
         ],
         [
+            'text'        => 'En espera',
+            'url'         => '/repairs/listOnHold',
+            'icon'        => 'fas fa-spinner',
+            'label'       => '',
+            'label_color' => '',
+        ],
+        [
             'text'        => 'En proceso',
             'url'         => '/repairs/listInProcess',
             'icon'        => 'fas fa-wrench',
@@ -250,9 +257,9 @@ return [
             'label_color' => '',
         ],
         [
-            'text'        => 'En espera',
-            'url'         => '/repairs/listOnHold',
-            'icon'        => 'fas fa-spinner',
+            'text'        => 'Terminadas',
+            'url'         => '/repairs/listFinished',
+            'icon'        => 'fas fa-check-circle',
             'label'       => '',
             'label_color' => '',
         ],

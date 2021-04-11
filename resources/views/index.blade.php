@@ -117,7 +117,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="text-center pt-3">
-                    <h3>Racks</h3>
+                    <h3>Estanterías metálicas</h3>
                 </div>
                 <img src="./image/estanterias.jpg" class="d-block w-100" alt="..." style=" width:100%; height: 400px !important;">
                 <div class="text-center pt-3">
@@ -170,6 +170,7 @@
                     <a type="button" href="galeria/seguridad" class="btn btn-warning"> Ver galería</a>
                 </div>
             </div>
+           <!-- 
             <div class="col-sm-6">
                 <div class="text-center pt-3">
                     <h3>Accesorios</h3>
@@ -185,6 +186,7 @@
                     <a type="button" href="galeria/accesorios" class="btn btn-warning"> Ver galería</a>
                 </div>
             </div>
+            -->
         </div>
         <br>
 
@@ -200,7 +202,7 @@
                     <div class="card-body">
                         <img src="./image/Repuestos 2.jpg" class="card-img-top" alt="...">
                         <h4 class="card-title text-center"><b>Reparaciones de sillas y sillones</b></h4>
-                        <p class="card-text">Realizamos presupuestos sin cargo con un amplio grado de detalle. Contamos con mas de 20 años de experiencia en las reparciones y disponemos de los mejores repuestos del país.</p>
+                        <p class="card-text">Realizamos presupuestos sin cargo con un amplio grado de detalle. Contamos con mas de 20 años de experiencia en reparaciones y disponemos de una gran variedad de repuestos.</p>
                     </div>
                 </div>
             </div>

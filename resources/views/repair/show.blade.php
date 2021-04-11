@@ -18,10 +18,13 @@
     <table id="repairs" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%;padding:2px">
         <thead class="bg-primary text-white">
             <tr>
-                <th scope="col" style="width: 1%">Id</th>
-                <th scope="col" style="width: 10%">Fecha</th>
-                <th scope="col" style="width: 20%">Descripción</th>
+                <th scope="col" style="width: 1%">Nº</th>
+                <th scope="col" style="width: 5%">Fecha</th>
+                <th scope="col" style="width: 10%">Descripción</th>
+                <th scope="col" style="width: 5%">Trabajo</th> 
                 <th scope="col" style="width: 5%">Seña</th>
+                <th scope="col" style="width: 5%">Importe</th>
+                <th scope="col" style="width: 10%">Comentarios</th>
                 <th scope="col" style="width: 10%">Estado</th>
                 <th scope="col" style="width: 15%"></th>
             </tr>
@@ -41,7 +44,10 @@
                     @endif
                 </td>
                 <td> {{$repair->description}} </td>
+                <td> {{$repair->job}} </td>
                 <td> {{$repair->paymentSign}} </td>
+                <td> {{$repair->price}} </td>
+                <td> {{$repair->comments}} </td>
 
 
                 <td>
@@ -74,10 +80,10 @@
                 <td>
                     <div class="text-center">
                         <form action="{{ route('repairs.destroy',$repair->id) }}" method="post" class="delete-form">
-                            <a href="/repairs/{{$repair->id}}/edit" style="width: 40%" class="btn btn-info">Editar</a>
+                            <a href="/repairs/{{$repair->id}}/edit" style="width: auto" class="btn btn-info">Editar</a>
                             @csrf
                             @method('DELETE')
-                            <button type="submit" style="width: 40%" class="btn btn-danger">Borrar</button>
+                            <button type="submit" style="width:auto" class="btn btn-danger">Borrar</button>
                         </form>
                     </div>
                 </td>

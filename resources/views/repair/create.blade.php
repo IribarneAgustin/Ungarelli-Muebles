@@ -13,7 +13,12 @@
 
     <div class="form-group">
         <label for="exampleInputEmail1">Descripción</label>
-        <textarea name="description" type="text" class="form-control" id="exampleInputEmail1" required></textarea>
+        <input name="description" type="text" class="form-control" id="exampleInputEmail1" required>
+    </div>
+
+    <div class="form-group">
+        <label for="job">Trabajo a realizar</label>
+        <input name="job" type="text" class="form-control" id="job" required>
     </div>
 
     <div class="form-group">
@@ -28,6 +33,17 @@
         <label for="exampleInputEmail1">Seña (opcional)</label>
         <input name="paymentSign" type="number" min="0" class="form-control" id="exampleInputEmail1">
     </div>
+
+    <div class="form-group">
+        <label for="price">Importe total</label>
+        <input name="price" type="number" class="form-control" id="price" value="0" min="0" required>
+    </div>
+
+    <div class="form-group">
+        <label for="comments">Comentarios</label>
+        <input name="comments" type="text" class="form-control" id="comments">
+    </div>
+
 
     <br>
     <div class="form-group">

@@ -85,6 +85,7 @@ class HomeController extends Controller
         return $id;
     }
 
+
     /* Metodo para enviar emails */
 
     public function contact(Request $request)

@@ -18,7 +18,7 @@
     <div class="col-md-6 col-lg-4" style="padding:10px">
         <div class="card border-0">
             <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-mdb-ripple-color="light">
-                <a class="lightbox" href="#exampleModal"><img src="{{$article->image}}" class="card-img-top">
+                <a class="lightbox" href="{{$article->image}}"><img src="{{$article->image}}" class="card-img-top">
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
                 </a>
                 <div class="card-body">
@@ -31,27 +31,6 @@
             </div>
         </div>
     </div>
-    <!-- -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     @endforeach
 </div>
 </div>

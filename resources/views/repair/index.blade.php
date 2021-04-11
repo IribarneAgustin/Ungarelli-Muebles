@@ -12,12 +12,15 @@
     <table id="repairs" class="table table-striped table-bordered shadow-lg mt-4" style="width:100%;padding:2px">
         <thead class="bg-primary text-white">
             <tr>
-                <th scope="col" style="width: 1%">Id</th>
+                <th scope="col" style="width: 1%">Nº</th>
                 <th scope="col" style="width: 10%">Cliente</th>
-                <th scope="col" style="width: 10%">Fecha</th>
-                <th scope="col" style="width: 20%">Descripción</th>
+                <th scope="col" style="width: 5%">Fecha</th>
+                <th scope="col" style="width: 10%">Descripción</th>
+                <th scope="col" style="width: 10%">Trabajo</th>
                 <th scope="col" style="width: 5%">Seña</th>
+                <th scope="col" style="width: 5%">Importe</th>
                 <th scope="col" style="width: 10%">Estado</th>
+                <th scope="col" style="width: 10%">Comentarios</th>
 
             </tr>
         </thead>
@@ -31,10 +34,20 @@
                 <td> {{$client->name}} </td>
                 @endif
                 @endforeach
-                <td> {{$repair->created_at}} </td>
+                <td>
+                    @if ($repair->created_at != "")
+                    @foreach(explode(' ', $repair->created_at) as $info)
+                    <option>{{date('d-m-Y', strtotime($info))}}</option>
+                    @break
+                    @endforeach
+                    @endif
+                </td>
                 <td> {{$repair->description}} </td>
+                <td> {{$repair->job}} </td>
                 <td> {{$repair->paymentSign}} </td>
-                <td> {{$repair->status}}</td>
+                <td> {{$repair->price}} </td>
+                <td> {{$repair->status}} </td>
+                <td> {{$repair->comments}} </td>
 
             </tr>
             @endforeach
