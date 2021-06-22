@@ -16,6 +16,7 @@
     <p>Contamos con una amplia variedad de estanterías, por lo que nos adaptamos a la necesidad de cada cliente</p>
     <hr>
 </div>
+
 <div class="row">
     @foreach($articles as $article)
     <div class="col-md-6 col-lg-4" style="padding:10px">

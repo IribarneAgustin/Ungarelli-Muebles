@@ -92,6 +92,9 @@ class RepairController extends Controller
 
         $repair->description = $request->get('description');
         $repair->paymentSign = $request->get('paymentSign');
+        $repair->comments = $request->get('comments');
+        $repair->price = $request->get('price');
+        $repair->job = $request->get('job');
 
         $repair->save();
 

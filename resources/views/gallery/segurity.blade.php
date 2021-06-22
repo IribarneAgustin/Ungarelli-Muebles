@@ -9,12 +9,13 @@
         <img src="/logo/ungarelli small.png" style=" width:auto; height: 50px !important;">
     </div>
 </div>
+
 <div class="text-center pt-5">
     <p>Cajas, tesoros y gavetas</p>
     <hr>
 </div>
 
-</div>
+
 <div class="row">
     @foreach($articles as $article)
     <div class="col-md-6 col-lg-4" style="padding:10px">

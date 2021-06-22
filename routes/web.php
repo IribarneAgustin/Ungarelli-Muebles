@@ -10,11 +10,11 @@ use Illuminate\Support\Facades\Artisan;
 Route::get('/admin', function () {
     return view('auth.login');
 });
-/*
+
 Route::get('register', function () {
     return view('auth.login');
 });
-*/
+
 Route::get('/', [HomeController::class, 'index']);
 Route::post('/repairs/changeStatus', [RepairController::class, 'changeStatus'])->name('changeStatus');
 Route::get('/repairs/listInProcess', [RepairController::class, 'listInProcess'])->name('listInProcess');

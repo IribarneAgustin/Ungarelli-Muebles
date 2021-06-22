@@ -22,7 +22,7 @@ class ArticleController extends Controller
 
     public function create()
     {
-        $categories = Category::all();
+        $categories = Category::orderBy('name')->get();
         return view('article.create')->with('categories', $categories);
     }
 

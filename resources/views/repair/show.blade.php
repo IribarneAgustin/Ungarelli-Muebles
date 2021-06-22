@@ -4,6 +4,8 @@
 
 @section('content_header')
 <h1>Reparaciones de {{$client->name}} </h1>
+<br>
+<p><b>Teléfono/s: {{$client->phone}} </b> </p>
 
 @stop
 

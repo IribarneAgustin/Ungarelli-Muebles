@@ -16,14 +16,23 @@ class HomeController extends Controller
     }
     public function furnitureGallery()
     {
-        $articles = $this->getArticlesByCategoryId($this->getCategoryIdByName('Muebles de oficina'));
-        return view('gallery.furnitureOffice', ['articles' => $articles]);
+        $desksAndTables = $this->getArticlesByCategoryId($this->getCategoryIdByName('Escritorios y mesas'));
+        $libraries = $this->getArticlesByCategoryId($this->getCategoryIdByName('Bibliotecas'));
+        $chestOfDrawers =  $this->getArticlesByCategoryId($this->getCategoryIdByName('Cajoneras')); 
+        $counters =  $this->getArticlesByCategoryId($this->getCategoryIdByName('Mostradores'));
+         
+        return view('gallery.furnitureOffice')->with('desksAndTables',$desksAndTables)->with('libraries',$libraries)->with('chestOfDrawers',$chestOfDrawers)->with('counters',$counters);
     }
 
     public function chairsGallery()
     {
-        $articles = $this->getArticlesByCategoryId($this->getCategoryIdByName('Sillas y sillones'));
-        return view('gallery.chairs', ['articles' => $articles]);
+        $fixedChairs = $this->getArticlesByCategoryId($this->getCategoryIdByName('Sillas fijas'));
+        $taskChairs = $this->getArticlesByCategoryId($this->getCategoryIdByName('Sillas operativas'));
+        $managmentChairs = $this->getArticlesByCategoryId($this->getCategoryIdByName('Sillones gerenciales'));
+        $cashierChairs = $this->getArticlesByCategoryId($this->getCategoryIdByName('Sillas cajeras'));
+        $waitingRoom = $this->getArticlesByCategoryId($this->getCategoryIdByName('Sala de espera'));
+
+        return view('gallery.chairs')->with('fixedChairs',$fixedChairs)->with('taskChairs',$taskChairs)->with('managmentChairs',$managmentChairs)->with('cashierChairs',$cashierChairs)->with('waitingRoom',$waitingRoom);
     }
 
     public function shelvesGallery()
@@ -55,18 +64,8 @@ class HomeController extends Controller
 
     private function getArticlesByCategoryId($categoryId)
     {
-
-        $articles = Article::all();
-
-        $furnitureList = array();
-
-        foreach ($articles as $article) {
-            if ($article->categoryId == $categoryId) {
-                array_push($furnitureList, $article);
-            }
-        }
-
-        return $furnitureList;
+        $articles = Article::where('categoryId',$categoryId)->orderBy('name')->get();
+        return $articles;
     }
 
     private function getCategoryIdByName($name)
