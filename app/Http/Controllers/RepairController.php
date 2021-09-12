@@ -58,6 +58,13 @@ class RepairController extends Controller
         $clients = Client::all();
         return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
     }
+    public function listInSmith()
+    {
+
+        $repairs = Repair::all()->where('status', 'Herrero');
+        $clients = Client::all();
+        return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
+    }
     public function listInTapestry()
     {
 
