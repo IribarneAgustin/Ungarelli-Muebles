@@ -23,7 +23,7 @@
                 <th scope="col" style="width: 1%">Nº</th>
                 <th scope="col" style="width: 5%">Fecha</th>
                 <th scope="col" style="width: 10%">Descripción</th>
-                <th scope="col" style="width: 5%">Trabajo</th> 
+                <th scope="col" style="width: 5%">Trabajo</th>
                 <th scope="col" style="width: 5%">Seña</th>
                 <th scope="col" style="width: 5%">Importe</th>
                 <th scope="col" style="width: 10%">Comentarios</th>
@@ -50,10 +50,7 @@
                 <td> {{$repair->paymentSign}} </td>
                 <td> {{$repair->price}} </td>
                 <td> {{$repair->comments}} </td>
-
-
                 <td>
-                    @if ($repair->status != "Entregada")
                     <form action="{{ route('changeStatus') }}" method="post">
                         @csrf
                         <input name="id" type="hidden" value="{{$repair->id}}">
@@ -73,11 +70,6 @@
                         @endif
 
                     </form>
-                    @else
-                    <b> {{$repair->status}} </b>
-                    @endif
-
-
                 </td>
                 <td>
                     <div class="text-center">

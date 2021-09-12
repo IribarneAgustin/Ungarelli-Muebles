@@ -271,6 +271,20 @@ return [
             'label_color' => '',
         ],
         [
+            'text'        => 'Herrero',
+            'url'         => '/repairs/listInSmith',
+            'icon'        => 'fas fa-hammer',
+            'label'       => '',
+            'label_color' => '',
+        ],
+        [
+            'text'        => 'Todas menos entregadas',
+            'url'         => '/repairs/listAllButDelivered',
+            'icon'        => 'fa fa-list-ol',
+            'label'       => '',
+            'label_color' => '',
+        ],
+        [
             'text'        => 'Ver todas',
             'url'         => '/repairs',
             'icon'        => 'fas fa-list-ul',

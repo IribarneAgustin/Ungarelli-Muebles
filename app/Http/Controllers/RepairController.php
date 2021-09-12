@@ -47,7 +47,7 @@ class RepairController extends Controller
         $repairs = Repair::orderBy('created_at','desc')->get();
         $client = Client::find($clientId);
 
-        $statusList = ["En espera", "En proceso", "En tapicería", "Terminada", "Entregada"];
+        $statusList = ["En espera", "En proceso", "En tapicería", "Terminada", "Entregada", "Herrero" ,"No se hace"];
         return view('repair.show', ['repairs' => $repairs], ['client' => $client])->with("statusList", $statusList);
     }
 
@@ -76,6 +76,13 @@ class RepairController extends Controller
     {
 
         $repairs = Repair::all()->where('status', 'Terminada');
+        $clients = Client::all();
+        return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
+    }
+
+    public function listAllButDelivered()
+    {
+        $repairs = Repair::all()->where('status', '!=','Entregada');
         $clients = Client::all();
         return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
     }

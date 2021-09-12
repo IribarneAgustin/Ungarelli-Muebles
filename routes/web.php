@@ -17,6 +17,7 @@ Route::get('register', function () {
 
 Route::get('/', [HomeController::class, 'index']);
 Route::post('/repairs/changeStatus', [RepairController::class, 'changeStatus'])->name('changeStatus');
+Route::get('/repairs/listAllButDelivered', [RepairController::class, 'listAllButDelivered'])->name('listAllButDelivered');
 Route::get('/repairs/listInProcess', [RepairController::class, 'listInProcess'])->name('listInProcess');
 Route::get('/repairs/listInTapestry', [RepairController::class, 'listInTapestry'])->name('listInTapestry');
 Route::get('/repairs/listOnHold', [RepairController::class, 'listOnHold'])->name('listOnHold');
