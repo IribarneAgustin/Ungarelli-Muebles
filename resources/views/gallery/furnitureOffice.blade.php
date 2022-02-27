@@ -23,13 +23,13 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="/image/nehaya.jpg" class="d-block w-100" alt="...">
+                    <img src="/image/nehaya.webp" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="/image/negro.jpg" class="d-block w-100" alt="...">
+                    <img src="/image/negro.webp" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="/image/nogal.jpg" class="d-block w-100" alt="...">
+                    <img src="/image/nogal.webp" class="d-block w-100" alt="...">
                 </div>
             </div>
         </div>
@@ -42,13 +42,13 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="/image/ceniza.jpg" class="d-block w-100" alt="...">
+                    <img src="/image/ceniza.webp" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="/image/peral.jpg" class="d-block w-100" alt="...">
+                    <img src="/image/peral.webp" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="/image/grafito.jpg" class="d-block w-100" alt="...">
+                    <img src="/image/grafito.webp" class="d-block w-100" alt="...">
                 </div>
             </div>
         </div>

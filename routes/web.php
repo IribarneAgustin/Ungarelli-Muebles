@@ -35,6 +35,16 @@ Route::get('/galeria/seguridad', [HomeController::class, 'segurityGallery']);
 Route::get('/galeria/accesorios', [HomeController::class, 'accesoriesGallery']);
 Route::post('contact', [HomeController::class, 'contact']);
 
+Route::get('/route-cache', function() {
+    $exitCode = Artisan::call('route:cache');
+    return 'Routes cache cleared';
+});
+
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return 'Application cache cleared';
+});
+
 Route::get('storage-link', function () {
 
     if (file_exists(public_path('storage'))) {

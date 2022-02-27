@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -42,7 +41,7 @@
     
     <div class="w3-top">
         <div class="w3-center w3-card w3-white" style="opacity:80%">
-            <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img class="w3-bar-item w3-hide-small" src="/logo/ungarelli small.png" style=" width:auto; height: 60px !important;"></a>
+            <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img class="w3-bar-item w3-hide-small" src="/logo/ungarelli small.png" max-age=31536000 style=" width:auto; height: 60px !important;"></a>
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"  style="width:100%" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Inicio</strong></a>
             <a href="#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Productos</strong></a>
@@ -63,7 +62,7 @@
     <!-- Header -->
 
     <div style="width:100%; height: auto !important;">
-        <img src="./image/banner.png" class="d-block w-100 " alt="...">
+        <img src="./image/banner.webp" class="d-block w-100 " max-age=31536000 alt="...">
     </div>
 
     <!-- Artículos -->
@@ -79,13 +78,13 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" style=" width:100%; height: 300px !important;">
                         <div class="carousel-item active" data-bs-interval="4000">
-                            <img src="./image/directorio.jpg" class="d-block w-100" alt="...">
+                            <img src="./image/directorio.webp" class="d-block w-100" max-age=31536000 alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="4000">
-                            <img src="./image/mueblesd.jpg" class="d-block w-100" alt="...">
+                            <img src="./image/mueblesd.webp" class="d-block w-100" max-age=31536000 alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="4000">
-                            <img src="./image/5913.jpg" class="d-block w-100" alt="...">
+                            <img src="./image/5913.webp" class="d-block w-100" max-age=31536000 alt="...">
                         </div>
 
                     </div>
@@ -101,13 +100,13 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" style=" width:100%; height: 300px !important;">
                         <div class="carousel-item active" data-bs-interval="4000">
-                            <img src="./image/sillas.jpg" class="d-block w-100" alt="...">
+                            <img src="./image/sillas.webp" class="d-block w-100" max-age=31536000 alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="4000">
-                            <img src="./image/gamer.jpg" class="d-block w-100" alt="...">
+                            <img src="./image/gamer.webp" class="d-block w-100" max-age=31536000 alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="4000">
-                            <img src="./image/sillasoffice.jpg" class="d-block w-100" alt="...">
+                            <img src="./image/sillasoffice.webp" class="d-block w-100" max-age=31536000 alt="...">
                         </div>
                     </div>
                 </div>
@@ -119,7 +118,7 @@
                 <div class="text-center pt-3">
                     <h3>Estanterías metálicas</h3>
                 </div>
-                <img src="./image/estanterias.jpg" class="d-block w-100" alt="..." style=" width:100%; height: 400px !important;">
+                <img src="./image/estanterias.webp" class="d-block w-100" alt="..." max-age=31536000 style=" width:100%; height: 400px !important;">
                 <div class="text-center pt-3">
                     <a type="button" href="galeria/estanterías" class="btn btn-warning"> Ver galería</a>
                 </div>
@@ -128,7 +127,7 @@
                 <div class="text-center pt-3">
                     <h3>Racks</h3>
                 </div>
-                <img src="./image/rack.jpg" class="d-block w-100" alt="..." style=" width:100%; height: 400px !important;">
+                <img src="./image/rack.webp" class="d-block w-100" alt="..." max-age=31536000 style=" width:100%; height: 400px !important;">
                 <div class="text-center pt-3">
                     <a type="button" href="galeria/racks" class="btn btn-warning"> Ver galería</a>
                 </div>
@@ -141,15 +140,15 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" style=" width:100%; height: 400px !important;">
                         <div class="carousel-item active" data-bs-interval="3000">
-                            <img src="./image/mueblesmetalicos.jpg" class="d-block w-100" alt="...">
+                            <img src="./image/mueblesmetalicos.webp" max-age=31536000 class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="3000">
-                            <img src="./image/mueblesmetalicos1.jpg" class="d-block w-100" alt="...">
+                            <img src="./image/mueblesmetalicos1.webp" max-age=31536000 class="d-block w-100" alt="...">
                         </div>
                     </div>
                 </div>
                 <div class="text-center pt-3">
-                    <a type="button" href="galeria/muebles metálicos" class="btn btn-warning"> Ver galería</a>
+                    <a type="button" href="galeria/muebles metálicos" max-age=31536000 class="btn btn-warning"> Ver galería</a>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -159,10 +158,10 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" style=" width:100%; height: 300px !important;">
                         <div class="carousel-item active" data-bs-interval="3000">
-                            <img src="./image/gavetal.png" class="d-block w-100" alt="...">
+                            <img src="./image/gavetal.webp" max-age=31536000 class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="3000">
-                            <img src="./image/seguridad.jpg" class="d-block w-100" alt="...">
+                            <img src="./image/seguridad.webp" max-age=31536000 class="d-block w-100" alt="...">
                         </div>
                     </div>
                 </div>
@@ -178,7 +177,7 @@
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="3000">
-                            <img src="./image/percheros.png" class="d-block w-100" alt="...">
+                            <img src="./image/percheros.webp" class="d-block w-100" alt="...">
                         </div>
                     </div>
                 </div>
@@ -200,7 +199,7 @@
             <div class="col-sm-6">
                 <div class="card border-0">
                     <div class="card-body">
-                        <img src="./image/Repuestos 2.jpg" class="card-img-top" alt="...">
+                        <img src="./image/Repuestos 2.webp" max-age=31536000 class="card-img-top" alt="...">
                         <h4 class="card-title text-center"><b>Reparaciones de sillas y sillones</b></h4>
                         <p class="card-text">Realizamos presupuestos sin cargo con un amplio grado de detalle. Contamos con mas de 20 años de experiencia en reparaciones y disponemos de una gran variedad de repuestos.</p>
                     </div>
@@ -209,7 +208,7 @@
             <div class="col-sm-6">
                 <div class="card border-0">
                     <div class="card-body">
-                        <img src="./image/servicios.png" class="card-img-top" alt="...">
+                        <img src="./image/servicios.webp" max-age=31536000 class="card-img-top" alt="...">
                         <h4 class="card-title text-center"><b>Tapizados</b></h4>
                         <p class="card-text">Contamos con una amplia variedad de eco cueros de buena calidad, asi como también de panas lavables, para dejar tu sillón como recién comprado. A su vez, rellenamos tanto asiento como respaldo para amortizar el desgaste.</p>
                     </div>
@@ -264,7 +263,7 @@
 
     <div class="container mt-4">
         <div class="d-flex justify-content-center">
-            <img src="/logo/ungarelli small.png" style="height:400px; width:auto">
+            <img src="/logo/ungarelli small.png" max-age=31536000 style="height:400px; width:auto">
         </div>
 
         <br>
@@ -272,14 +271,14 @@
         <div class="d-flex justify-content-center">
             <div class="slider">
                 <ul class="slides">
-                    <li><img src="/image/historia/comienzos.jpg" alt="imagen1" /><span>Los comienzos del taller</span></li>
-                    <li><img src="/image/historia/comienzos1.jpg" alt="imagen1" /><span>Los comienzos del taller</span></li>
-                    <li><img src="/image/historia/comienzos4.jpg" alt="imagen1" /><span>Mobiliario innovador de la época</span></li>
-                    <li><img src="/image/historia/comienzos2.jpg" alt="imagen1" /><span>Instalaciones metálicas en la decada del 60</span></li>
-                    <li><img src="/image/historia/comienzos3.jpg" alt="imagen1" /><span>Instalaciones metálicas en la decada del 60</span></li>
-                    <li><img src="/image/historia/comienzos5.jpg" alt="imagen1" /><span>Instalaciones metálicas en la decada del 60</span></li>
-                    <li><img src="/image/historia/comienzos6.jpg" alt="imagen1" /><span>Homenaje a nuestra trayectoria</span></li>
-                    <li><img src="/image/historia/cortadora.jpg" alt="imagen1" /><span>Cortadora de principios del siglo</span></li>
+                    <li><img src="/image/historia/comienzos.webp" alt="imagen1" max-age=31536000/><span>Los comienzos del taller</span></li>
+                    <li><img src="/image/historia/comienzos1.webp" alt="imagen1" max-age=31536000/><span>Los comienzos del taller</span></li>
+                    <li><img src="/image/historia/comienzos4.webp" alt="imagen1" max-age=31536000/><span>Mobiliario innovador de la época</span></li>
+                    <li><img src="/image/historia/comienzos2.webp" alt="imagen1" max-age=31536000/><span>Instalaciones metálicas en la decada del 60</span></li>
+                    <li><img src="/image/historia/comienzos3.webp" alt="imagen1" max-age=31536000/><span>Instalaciones metálicas en la decada del 60</span></li>
+                    <li><img src="/image/historia/comienzos5.webp" alt="imagen1" max-age=31536000/><span>Instalaciones metálicas en la decada del 60</span></li>
+                    <li><img src="/image/historia/comienzos6.webp" alt="imagen1" max-age=31536000/><span>Homenaje a nuestra trayectoria</span></li>
+                    <li><img src="/image/historia/cortadora.webp" alt="imagen1" max-age=31536000/><span>Cortadora de principios del siglo</span></li>
                 </ul>
                 <div class="buttons">
                     <div class="next">&#10095;</div>
