@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -33,16 +34,18 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <!--Sweet Alert 2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
 <body>
     <!-- Navbar -->
-    
+
     <div class="w3-top">
         <div class="w3-center w3-card w3-white" style="opacity:80%">
             <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><img class="w3-bar-item w3-hide-small" src="/logo/ungarelli small.png" max-age=31536000 style=" width:auto; height: 60px !important;"></a>
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"  style="width:100%" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" style="width:100%" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Inicio</strong></a>
             <a href="#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Productos</strong></a>
             <a href="#servicios" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><strong>Servicios</strong></a>
@@ -51,13 +54,13 @@
     </div>
 
     <!-- Navbar small -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:60px"> 
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:60px">
         <a href="/" class="w3-bar-item w3-button w3-padding-large ">Inicio</a>
         <a href="/#nuestrosArticulos" class="w3-bar-item w3-button w3-padding-large ">Productos</a>
         <a href="#servicios" class="w3-bar-item w3-button w3-padding-large">Servicios</a>
         <a href="#contacto" class="w3-bar-item w3-button w3-padding-large">Contacto</a>
     </div>
- 
+
 
     <!-- Header -->
 
@@ -169,7 +172,7 @@
                     <a type="button" href="galeria/seguridad" class="btn btn-warning"> Ver galería</a>
                 </div>
             </div>
-           <!-- 
+            <!-- 
             <div class="col-sm-6">
                 <div class="text-center pt-3">
                     <h3>Accesorios</h3>
@@ -271,14 +274,14 @@
         <div class="d-flex justify-content-center">
             <div class="slider">
                 <ul class="slides">
-                    <li><img src="/image/historia/comienzos.webp" alt="imagen1" max-age=31536000/><span>Los comienzos del taller</span></li>
-                    <li><img src="/image/historia/comienzos1.webp" alt="imagen1" max-age=31536000/><span>Los comienzos del taller</span></li>
-                    <li><img src="/image/historia/comienzos4.webp" alt="imagen1" max-age=31536000/><span>Mobiliario innovador de la época</span></li>
-                    <li><img src="/image/historia/comienzos2.webp" alt="imagen1" max-age=31536000/><span>Instalaciones metálicas en la decada del 60</span></li>
-                    <li><img src="/image/historia/comienzos3.webp" alt="imagen1" max-age=31536000/><span>Instalaciones metálicas en la decada del 60</span></li>
-                    <li><img src="/image/historia/comienzos5.webp" alt="imagen1" max-age=31536000/><span>Instalaciones metálicas en la decada del 60</span></li>
-                    <li><img src="/image/historia/comienzos6.webp" alt="imagen1" max-age=31536000/><span>Homenaje a nuestra trayectoria</span></li>
-                    <li><img src="/image/historia/cortadora.webp" alt="imagen1" max-age=31536000/><span>Cortadora de principios del siglo</span></li>
+                    <li><img src="/image/historia/comienzos.webp" alt="imagen1" max-age=31536000 /><span>Los comienzos del taller</span></li>
+                    <li><img src="/image/historia/comienzos1.webp" alt="imagen1" max-age=31536000 /><span>Los comienzos del taller</span></li>
+                    <li><img src="/image/historia/comienzos4.webp" alt="imagen1" max-age=31536000 /><span>Mobiliario innovador de la época</span></li>
+                    <li><img src="/image/historia/comienzos2.webp" alt="imagen1" max-age=31536000 /><span>Instalaciones metálicas en la decada del 60</span></li>
+                    <li><img src="/image/historia/comienzos3.webp" alt="imagen1" max-age=31536000 /><span>Instalaciones metálicas en la decada del 60</span></li>
+                    <li><img src="/image/historia/comienzos5.webp" alt="imagen1" max-age=31536000 /><span>Instalaciones metálicas en la decada del 60</span></li>
+                    <li><img src="/image/historia/comienzos6.webp" alt="imagen1" max-age=31536000 /><span>Homenaje a nuestra trayectoria</span></li>
+                    <li><img src="/image/historia/cortadora.webp" alt="imagen1" max-age=31536000 /><span>Cortadora de principios del siglo</span></li>
                 </ul>
                 <div class="buttons">
                     <div class="next">&#10095;</div>
@@ -346,6 +349,7 @@
 
                                         <form action="{{'contact'}}" method="post">
                                             @csrf
+
                                             <div class="card border-primary rounded-0">
                                                 <div class="card-header p-0">
                                                     <div class="bg-info text-white text-center py-2">
@@ -381,6 +385,9 @@
                                                             <textarea class="form-control" name="message" placeholder="Envianos tu Mensaje" required></textarea>
                                                         </div>
                                                     </div>
+
+                                                    <div class="g-recaptcha" data-sitekey="{{config('services.recaptcha.key')}}"></div>
+                                                    <br/>
 
                                                     <div class="text-center">
                                                         <input type="submit" value="Enviar" class="btn btn-primary">
@@ -441,7 +448,6 @@
         var marker = L.marker([-38.00885, -57.56277]).addTo(mymap);
         marker.bindPopup("<b>Ungarelli Muebles</b><br> Av. Independencia 3244").openPopup();
     </script>
-
 
 </body>
 

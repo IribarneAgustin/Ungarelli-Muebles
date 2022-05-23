@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Mail\ContactMailable;
 use Illuminate\Support\Facades\Mail;
+use App\Rules\Recaptcha;
 
 class HomeController extends Controller
 {
@@ -89,7 +90,8 @@ class HomeController extends Controller
 
     public function contact(Request $request)
     {
-        $correo = new ContactMailable($request->all());
+        $this->validate($request,['g-recaptcha-response' => ['required', new Recaptcha()]]);
+        $correo = new ContactMailable($request->all()); 
         Mail::to("agusiri96@yahoo.com")->send($correo);
         return redirect('/')->with('message','Mensaje enviado');
     }
