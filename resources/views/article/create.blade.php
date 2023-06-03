@@ -42,6 +42,13 @@
             Artículo premium
         </label>
     </div>
+    
+    <div class="form-check">
+        <input name="modern" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            Línea Modern
+        </label>
+    </div>
 
     <br>
     <div class="form-group">

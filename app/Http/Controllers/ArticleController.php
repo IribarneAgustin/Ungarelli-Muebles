@@ -49,6 +49,12 @@ class ArticleController extends Controller
         else {
             $article->premium = false;
         }
+        
+        if ($request->get('modern') != null)
+            $article->modern = $request->get('modern');
+        else {
+            $article->modern = false;
+        }
 
         $article->save();
 
@@ -93,6 +99,12 @@ class ArticleController extends Controller
             $article->premium = $request->get('premium');
         else {
             $article->premium = false;
+        }
+        
+        if ($request->get('modern') != null)
+            $article->modern = $request->get('modern');
+        else {
+            $article->modern = false;
         }
 
         $article->save();

@@ -41,12 +41,25 @@
         @if($article->premium == 1)
         <input checked="true" name="premium" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
         <label class="form-check-label" for="flexCheckDefault">
-            Artículo premium
+            Artículo Premium
         </label>
         @else
         <input name="premium" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
         <label class="form-check-label" for="flexCheckDefault">
-            Artículo premium
+            Artículo Premium
+        </label>
+        @endif
+    </div>
+    <div class="form-check">
+        @if($article->modern == 1)
+        <input checked="true" name="modern" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            Artículo Modern
+        </label>
+        @else
+        <input name="modern" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            Artículo Modern
         </label>
         @endif
     </div>
