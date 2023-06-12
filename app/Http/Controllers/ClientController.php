@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Client;
+use Illuminate\Support\Facades\Cache;
 
 class ClientController extends Controller
 {
@@ -14,7 +15,7 @@ class ClientController extends Controller
 
     public function index()
     {
-        $clients = Client::all();
+        $clients = $this->clientsCache();
         return view('client.index', ['clients' => $clients]);
     }
 
@@ -72,4 +73,18 @@ class ClientController extends Controller
         $client->delete();
         return redirect('/clients')->with('delete', 'ok');
     }
+    
+    private function clientsCache()
+{
+    // Check if the clients data is already cached
+    if (Cache::has('clients_data')) {
+        $clients = Cache::get('clients_data');
+    } else {
+        // Clients data is not cached, retrieve it from the database
+        $clients = Client::all()->toArray(); // Convert the collection to an array
+        Cache::put('clients_data', $clients, 43200); // Cache the clients data for 12 hours
+    }
+
+    return $clients;
+}
 }
