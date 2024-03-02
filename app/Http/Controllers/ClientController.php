@@ -33,10 +33,11 @@ class ClientController extends Controller
         $client->timestamps = false;
 
         if ($request->email) {
-            $client->email =  $request->get('email');
+            $client->email = $request->get('email');
         }
 
         $client->save();
+        $this->updateClientsCache();
 
         return redirect('/clients');
     }
@@ -59,10 +60,11 @@ class ClientController extends Controller
         $client->name = $request->get('name');
         $client->phone = $request->get('phone');
         $client->timestamps = false;
-        $client->email =  $request->get('email');
+        $client->email = $request->get('email');
 
 
         $client->save();
+        $this->updateClientsCache();
 
         return redirect('/clients');
     }
@@ -71,20 +73,31 @@ class ClientController extends Controller
     {
         $client = Client::find($id);
         $client->delete();
+        $this->updateClientsCache();
         return redirect('/clients')->with('delete', 'ok');
     }
-    
+
     private function clientsCache()
-{
-    // Check if the clients data is already cached
-    if (Cache::has('clients_data')) {
-        $clients = Cache::get('clients_data');
-    } else {
-        // Clients data is not cached, retrieve it from the database
-        $clients = Client::all()->toArray(); // Convert the collection to an array
+    {
+        // Check if the clients data is already cached
+        if (Cache::has('clients_data')) {
+            $clients = Cache::get('clients_data');
+        } else {
+            // Clients data is not cached, retrieve it from the database
+            $clients = Client::all();
+            Cache::put('clients_data', $clients, 43200); // Cache the clients data for 12 hours
+        }
+
+        return $clients;
+    }
+
+    private function updateClientsCache()
+    {
+
+        Cache::forget('clients_data');
+        $clients = Client::all();
         Cache::put('clients_data', $clients, 43200); // Cache the clients data for 12 hours
     }
 
-    return $clients;
-}
+
 }

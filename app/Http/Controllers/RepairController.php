@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\Models\Repair;
 use App\Models\Client;
@@ -14,25 +15,13 @@ class RepairController extends Controller
     }
 
     public function index()
-    {   
-        // Check if the data is already cached
-        if (Cache::has('repair_index_data')) {
-            $data = Cache::get('repair_index_data');
-        } else {
-            // Data is not cached, retrieve it from the database
-            $repairs = Repair::orderBy('created_at', 'desc')->get();
-            $clients = Client::all();
+    {
+        $repairs = $this->getRepairsCache();
+        $clients = $this->clientsCache();
+        return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
 
-            // Store the data in the cache
-            $data = [
-                'repairs' => $repairs,
-                'clients' => $clients,
-            ];
-            Cache::put('repair_index_data', $data, 43200); // Cache for 12 hours
-        }
-
-        return view('repair.index', ['repairs' => $data['repairs']], ['clients' => $data['clients']]);
     }
+
 
     public function create(Request $request)
     {
@@ -52,16 +41,16 @@ class RepairController extends Controller
         $repair->paymentSign = $request->get('paymentSign');
 
         $repair->save();
-
+        $this->updateRepairsCache();
         return $this->show($request->get('clientId'));
     }
 
     public function show($clientId)
     {
-        $repairs = Repair::orderBy('created_at','desc')->get();
+        $repairs = $this->getRepairsCache();
         $client = Client::find($clientId);
 
-        $statusList = ["En espera", "En proceso", "En tapicería", "Terminada", "Entregada","Herrero", "No se hace"];
+        $statusList = ["En espera", "En proceso", "En tapicería", "Terminada", "Entregada", "Herrero", "No se hace"];
         return view('repair.show', ['repairs' => $repairs], ['client' => $client])->with("statusList", $statusList);
     }
 
@@ -69,7 +58,7 @@ class RepairController extends Controller
     {
 
         $repairs = Repair::all()->where('status', 'En proceso');
-        $clients =  $this->clientsCache();
+        $clients = $this->clientsCache();
         return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
     }
     public function listInSmith()
@@ -100,10 +89,10 @@ class RepairController extends Controller
         $clients = $this->clientsCache();
         return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
     }
-    
+
     public function listAllButDelivered()
     {
-        $repairs = Repair::all()->where('status', '!=','Entregada');
+        $repairs = Repair::all()->where('status', '!=', 'Entregada');
         $clients = $this->clientsCache();
         return view('repair.index', ['repairs' => $repairs], ['clients' => $clients]);
     }
@@ -126,6 +115,7 @@ class RepairController extends Controller
 
 
         $repair->save();
+        $this->updateRepairsCache();
 
         return $this->show($repair->clientId);
     }
@@ -134,6 +124,7 @@ class RepairController extends Controller
     {
         $repair = Repair::find($id);
         $repair->delete();
+        $this->updateRepairsCache();
         return $this->show($repair->clientId);
     }
 
@@ -143,22 +134,45 @@ class RepairController extends Controller
         $repair = Repair::find($request->get('id'));
         $repair->status = $request->get('status');
         $repair->save();
+        $this->updateRepairsCache();
         return $this->show($repair->clientId);
     }
-    
+
     private function clientsCache()
     {
         // Check if the clients data is already cached
         if (Cache::has('clients_data')) {
             $clients = Cache::get('clients_data');
         } else {
-        // Clients data is not cached, retrieve it from the database
+            // Clients data is not cached, retrieve it from the database
             $clients = Client::all()->toArray(); // Convert the collection to an array
             Cache::put('clients_data', $clients, 43200); // Cache the clients data for 12 hours
         }
 
-        return $clients;
+        return collect($clients);
     }
 
-   
+    private function getRepairsCache()
+    {
+
+        if (Cache::has('repairs_data')) {
+            $repairs = Cache::get('repairs_data');
+        } else {
+            $repairs = Repair::orderBy('created_at', 'desc')->get();
+            Cache::put('repairs_data', $repairs, 43200); // Cache data for 12 hours
+        }
+
+        return $repairs;
+
+    }
+
+    private function updateRepairsCache()
+    {
+
+        Cache::forget('repairs_data');
+        $repairs = Repair::orderBy('created_at', 'desc')->get();
+        Cache::put('repairs_data', $repairs, 43200); // Cache the clients data for 12 hours
+    }
+
+
 }
