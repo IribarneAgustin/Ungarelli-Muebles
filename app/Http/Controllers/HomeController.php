@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         return view('index');
     }
-    public function furnitureGallery()
+       public function furnitureGallery()
     {
         $desksAndTables = $this->getArticlesByCategoryId($this->getCategoryIdByName('Escritorios y mesas'));
         $libraries = $this->getArticlesByCategoryId($this->getCategoryIdByName('Bibliotecas'));
@@ -24,6 +24,7 @@ class HomeController extends Controller
          
         return view('gallery.furnitureOffice')->with('desksAndTables',$desksAndTables)->with('libraries',$libraries)->with('chestOfDrawers',$chestOfDrawers)->with('counters',$counters);
     }
+   
 
     public function chairsGallery()
     {
@@ -32,8 +33,9 @@ class HomeController extends Controller
         $managmentChairs = $this->getArticlesByCategoryId($this->getCategoryIdByName('Sillones gerenciales'));
         $cashierChairs = $this->getArticlesByCategoryId($this->getCategoryIdByName('Sillas cajeras'));
         $waitingRoom = $this->getArticlesByCategoryId($this->getCategoryIdByName('Sala de espera'));
+        $offers = $this->getArticlesByCategoryId($this->getCategoryIdByName('OFERTAS - Sillas y Sillones Reacondicionados'));
 
-        return view('gallery.chairs')->with('fixedChairs',$fixedChairs)->with('taskChairs',$taskChairs)->with('managmentChairs',$managmentChairs)->with('cashierChairs',$cashierChairs)->with('waitingRoom',$waitingRoom);
+        return view('gallery.chairs')->with('fixedChairs',$fixedChairs)->with('taskChairs',$taskChairs)->with('managmentChairs',$managmentChairs)->with('cashierChairs',$cashierChairs)->with('waitingRoom',$waitingRoom)->with('offers',$offers);
     }
 
     public function shelvesGallery()
@@ -65,7 +67,8 @@ class HomeController extends Controller
 
     private function getArticlesByCategoryId($categoryId)
     {
-        $articles = Article::where('categoryId',$categoryId)->orderBy('name')->get();
+
+      $articles = Article::where('categoryId',$categoryId)->orderBy('name')->get();
         return $articles;
     }
 
@@ -91,8 +94,8 @@ class HomeController extends Controller
     public function contact(Request $request)
     {
         $this->validate($request,['g-recaptcha-response' => ['required', new Recaptcha()]]);
-        $correo = new ContactMailable($request->all()); 
-        Mail::to("agusiri96@yahoo.com")->send($correo);
+        $correo = new ContactMailable($request->all());
+        Mail::to("goungarelli@yahoo.com.ar")->send($correo);
         return redirect('/')->with('message','Mensaje enviado');
     }
 }
